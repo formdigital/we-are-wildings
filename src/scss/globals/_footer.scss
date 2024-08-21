@@ -1,0 +1,215 @@
+.siteFooter {
+    border-top: 1px solid rgba(25,27,25,0.1);
+
+    &Cta,
+    &Links {
+        display: flex;
+        text-align: center;
+    }
+
+    &Cta {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacer-y-x4) var(--spacer-x);
+        border-bottom: 1px solid rgba(25,27,25,0.1);
+
+        .logo {
+            height: calc(var(--font-size-xl) * 2);
+
+            svg {
+                width: auto;
+                height: 100%;
+            }
+
+            + .heading {
+                margin-top: 1em;
+            }
+        }
+
+        .heading {
+            max-width: 9em;
+        }
+    }
+
+    &Links {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        padding: 3rem var(--spacer-x) 1.5rem var(--spacer-x);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+
+        @include sm-breakpoint {
+            row-gap: 0;
+            padding: 0;
+            border-bottom: 1px solid rgba(25,27,25,0.1);
+        }
+
+        @include xl-breakpoint {
+            row-gap: 2rem;
+            padding: 2rem var(--spacer-x);
+        }
+        
+        .item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            @include sm-breakpoint {
+                width: 50%;
+                padding: 2rem var(--spacer-x);
+            }
+
+            @include xl-breakpoint {
+                width: 25%;
+                padding: 0;
+            }
+
+            &:nth-child(odd) {
+
+                @include sm-breakpoint {
+                    border-right: 1px solid rgba(25,27,25,0.1);
+                }
+
+                @include xl-breakpoint {
+                    border-right: none;
+                }
+            }
+
+            &:not(:last-child):not(:nth-last-child(2)) {
+
+                @include sm-breakpoint {
+                    border-bottom: 1px solid rgba(25,27,25,0.1);
+                }
+
+                @include xl-breakpoint {
+                    border-bottom: none;
+                }
+            }
+
+            &:not(:last-child) {
+
+                @include xl-breakpoint {
+                    border-right: 1px solid rgba(25,27,25,0.1);
+                }
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.2em;
+
+                &:hover {
+
+                    .link::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
+
+        .heading {
+            font-weight: 500;
+        }
+
+        .link {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+            }
+
+            &::before {
+                background: rgba(25,27,25,0.1);
+            }
+
+            &::after {
+                background: currentColor;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+            }
+        }
+    }
+
+    &Bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        padding: 1.5rem var(--spacer-x) 3rem var(--spacer-x);
+        font-size: 0.6rem;
+
+        @include sm-breakpoint {
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 1.5em;
+            padding: 1.5rem var(--spacer-x);
+        }
+
+        @include xl-breakpoint {
+            justify-content: space-between;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+
+            @include sm-breakpoint {
+                flex-direction: row;
+                gap: 1.5em;
+            }
+
+            li {
+
+                a {
+                    position: relative;
+                    display: inline-block;
+        
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 1px;
+                    }
+        
+                    &::before {
+                        background: rgba(25,27,25,0.1);
+                    }
+        
+                    &::after {
+                        background: currentColor;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+                    }
+
+                    &:hover {
+    
+                        &::after {
+                            transform: scaleX(1);
+                            transform-origin: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

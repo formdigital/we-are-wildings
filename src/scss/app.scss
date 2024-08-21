@@ -1,1 +1,48 @@
-// app styles
+// Load fonts
+@font-face {
+    font-family: "Geist";
+    src: url("../fonts/GeistVF.ttf") format("truetype-variations"),
+         url("../fonts/GeistVF.woff") format("woff-variations"),
+         url("../fonts/GeistVF.woff2") format("woff2 supports variations"),
+         url("../fonts/GeistVF.woff2") format("woff2-variations");
+    font-weight: 400 700;
+}
+@font-face {
+    font-family: "ALTMariaClara-Light";
+    src: url("../fonts/ALTMariaClara-Light.ttf") format("truetype"),
+         url("../fonts/ALTMariaClara-Light.woff") format("woff"),
+         url("../fonts/ALTMariaClara-Light.woff2") format("woff2");
+    font-weight: normal;
+}
+
+// Global variables
+:root {
+
+    // Font family
+    --font-sans: 'Geist', sans-serif;
+    --font-serif: 'ALTMariaClara-Light', serif;
+
+    // Font size
+    --font-size-sm: clamp(13.33px, 0.01vi + 13.3px, 13.5px);
+    --font-size-base: clamp(16px, 0.1vi + 15.6px, 18px);
+    --font-size-md: clamp(19.2px, 0.24vi + 18.24px, 23.99px);
+    --font-size-lg: clamp(23.04px, 0.45vi + 21.25px, 31.98px);
+    --font-size-xl: clamp(27.65px, 0.75vi + 24.65px, 42.63px);
+    --font-size-2xl: clamp(33.18px, 1.18vi + 28.45px, 56.83px);
+    --font-size-3xl: clamp(39.81px, 1.8vi + 32.62px, 75.76px);
+    --font-size-4xl: clamp(47.78px, 2.66vi + 37.13px, 100.98px);
+
+    // Colour
+    --color-white: #f0edea;
+    --color-green: #29382b;
+
+    // Spacing
+    --spacer-x: clamp(16px, 1.6vi + 9.6px, 48px);
+    --spacer-y: clamp(16px, 0.8vi + 12.8px, 32px);
+    --spacer-y-x2: calc(var(--spacer-y) * 2);
+    --spacer-y-x3: calc(var(--spacer-y) * 3);
+    --spacer-y-x4: calc(var(--spacer-y) * 4);
+}
+
+// Custom styles
+@import "globals/index";

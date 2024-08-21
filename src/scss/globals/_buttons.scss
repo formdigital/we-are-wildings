@@ -1,0 +1,33 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    border-radius: 0.25rem;
+    background: var(--color-green);
+
+    &__stroke {
+        color: var(--color-green);
+        border: 1px solid rgba(25,27,25,0.2);
+        background: transparent;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    + .btn {
+        margin-top: 2.5rem;
+    }
+}

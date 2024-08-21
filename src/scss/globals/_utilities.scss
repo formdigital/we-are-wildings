@@ -1,0 +1,26 @@
+// Font family
+.sans { font-family: var(--font-sans); }
+.serif { font-family: var(--font-serif); }
+
+// Font size
+.font-size-sm { font-size: var(--font-size-sm); }
+.font-size-base { font-size: var(--font-size-base); }
+.font-size-md {font-size: var(--font-size-md); }
+.font-size-lg { font-size: var(--font-size-lg); line-height: 1; }
+.font-size-xl { font-size: var(--font-size-xl); line-height: 1; }
+.font-size-2xl { font-size: var(--font-size-2xl); line-height: 1; }
+.font-size-3xl { font-size: var(--font-size-3xl); line-height: 1; }
+.font-size-4xl { font-size: var(--font-size-4xl); line-height: 1; }
+
+// Text align
+.text-center { text-align: center; }
+
+// Text transform
+.uppercase { text-transform: uppercase; }
+
+// Padding
+.px-1 { padding-left: var(--spacer-x); padding-right: var(--spacer-x); }
+.py-1 { padding-top: var(--spacer-y); padding-bottom: var(--spacer-y); }
+.py-2 { padding-top: var(--spacer-y-x2); padding-bottom: var(--spacer-y-x2); }
+.py-3 { padding-top: var(--spacer-y-x3); padding-bottom: var(--spacer-y-x3); }
+.py-4 { padding-top: var(--spacer-y-x4); padding-bottom: var(--spacer-y-x4); }
