@@ -1,15 +1,15 @@
-# mix-webpack-starter
+# we-are-wildings
 
 ### Setup
 
 Clone project
 ```bash
-git clone git@github.com:formdigital/mix-webpack-starter.git
+git clone git@github.com:formdigital/we-are-wildings.git
 ```
 
 Open directory
 ```bash
-cd mix-webpack-starter
+cd we-are-wildings
 ```
 
 Install dependancies
