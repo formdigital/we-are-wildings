@@ -35,6 +35,8 @@
     // Colour
     --color-white: #f0edea;
     --color-green: #29382b;
+    --color-yellow: #dd8e19;
+    --color-offwhite: #e0dad5;
 
     // Spacing
     --spacer-x: clamp(16px, 1.6vi + 9.6px, 48px);
@@ -42,7 +44,13 @@
     --spacer-y-x2: calc(var(--spacer-y) * 2);
     --spacer-y-x3: calc(var(--spacer-y) * 3);
     --spacer-y-x4: calc(var(--spacer-y) * 4);
+    --spacer-y-x5: calc(var(--spacer-y) * 5);
 }
+
+// Vendor styles
+@import "~swiper/swiper-bundle.css";
+@import "~accordion-js/dist/accordion.min.css";
 
 // Custom styles
 @import "globals/index";
+@import "templates/index";

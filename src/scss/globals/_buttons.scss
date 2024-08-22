@@ -1,9 +1,11 @@
 .btn {
+    --btn-height: 2.5rem;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 2.5rem;
-    padding: 0 1.25rem;
+    height: var(--btn-height);
+    padding: 0 calc(var(--btn-height) * 0.5);
     font-weight: 500;
     font-size: 0.7rem;
     text-align: center;
@@ -13,10 +15,19 @@
     border-radius: 0.25rem;
     background: var(--color-green);
 
-    &__stroke {
+    &Secondary {
+        color: var(--color-green);
+        background: var(--color-offwhite);
+    }
+
+    &Stroke {
         color: var(--color-green);
         border: 1px solid rgba(25,27,25,0.2);
         background: transparent;
+    }
+
+    &Sm {
+        --btn-height: 1.75rem;
     }
 }
 

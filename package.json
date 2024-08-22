@@ -23,5 +23,10 @@
     "sass-loader": "^12.6.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@unseenco/taxi": "^1.6.0",
+    "accordion-js": "^3.3.4",
+    "swiper": "^11.1.10"
   }
 }

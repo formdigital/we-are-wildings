@@ -1,0 +1,137 @@
+// GRID VARIABLES
+$breakpoints: (
+  xs: $xsBreakpoint,
+  sm: $smBreakpoint,
+  md: $mdBreakpoint,
+  lg: $lgBreakpoint,
+  xl: $xlBreakpoint,
+  xxl: $xxlBreakpoint,
+  xxxl: $xxxlBreakpoint,
+) !default;
+
+$grid-columns: 12 !default;
+$column-gutter: var(--gutter-x) !default;
+$compact-column-gutter: 5 !default;
+
+$container-width: 2000px !default;
+
+// GRID MIXINS
+@use "sass:math";
+
+@mixin media-breakpoint-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin media-breakpoint-between($breakpoint-min, $breakpoint-max) {
+    @if map-has-key($breakpoints, $breakpoint-min) and map-has-key($breakpoints, $breakpoint-max) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint-min)}) and (max-width: #{map-get($breakpoints, $breakpoint-max)}) {
+        @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-min}` or `#{$breakpoint-max}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin make-column($grid-columns, $size: null) {
+    @if $size {
+        $size: -#{$size};
+    }
+    
+    .col#{$size} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    
+    @for $i from 1 through $grid-columns {
+        .col#{$size}-#{$i} {
+        $col-width: (math.div(100%, $grid-columns) * $i);
+        flex-basis: $col-width;
+        max-width: $col-width;
+        }
+    }
+}
+
+@mixin generate-columns($breakpoints, $grid-columns) {
+    @include make-column($grid-columns);
+    @each $breakpoint, $size in $breakpoints {
+        @include media-breakpoint-up($breakpoint) {
+            @include make-column($grid-columns, $breakpoint);
+        }
+    }
+}
+
+// GRID STYLES
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-right: $column-gutter;
+    padding-left: $column-gutter;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: $column-gutter;
+    padding-left: $column-gutter;
+}
+
+.container--safe {
+    padding-right: max(#{$column-gutter}, env(safe-area-inset-right));
+    padding-left: max(#{$column-gutter}, env(safe-area-inset-left));
+}
+  
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  
+    &:not(&--no-gutters):not(&--compact) {
+        margin-right: calc(#{$column-gutter} * -1);
+        margin-left: calc(#{$column-gutter} * -1);
+    
+        & > .col,
+        & > [class^='col-'] {
+            padding-right: $column-gutter;
+            padding-left: $column-gutter;
+        }
+    }
+  
+    &--compact {
+        margin-right: calc(#{$compact-column-gutter} * -1);
+        margin-left: calc(#{$compact-column-gutter} * -1);
+    
+        & > .col,
+        & > [class^='col-'] {
+            padding-right: $compact-column-gutter;
+            padding-left: $compact-column-gutter;
+        }
+    }
+}
+  
+  
+@include generate-columns($breakpoints, $grid-columns);
+
+.col-fit-content {
+    flex-basis: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}

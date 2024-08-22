@@ -1,0 +1,24 @@
+.richtext {
+
+    p,
+    ol,
+    ul {
+        margin: 0 0 1em 0;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    + .richtext {
+        margin-top: calc(var(--spacer-y) * 1.5);
+    }
+}
