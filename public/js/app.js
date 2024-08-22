@@ -49,6 +49,39 @@ function Accordions() {
 
 /***/ }),
 
+/***/ "./src/js/modules/animation.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/animation.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Animations: () => (/* binding */ Animations)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+function Animations() {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+
+  // Footer logo animation
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.siteFooterLogo .type', {
+    rotate: -135,
+    transformOrigin: '50% 50%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.siteFooter',
+      start: 'top bottom',
+      end: 'bottom bottom',
+      scrub: true
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/modules/pageNav.js":
 /*!***********************************!*\
   !*** ./src/js/modules/pageNav.js ***!
@@ -106,7 +139,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _unseenco_taxi__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @unseenco/taxi */ "./node_modules/@unseenco/taxi/src/taxi.js");
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion */ "./src/js/modules/accordion.js");
-/* harmony import */ var _pageNav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pageNav */ "./src/js/modules/pageNav.js");
+/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animation */ "./src/js/modules/animation.js");
+/* harmony import */ var _pageNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pageNav */ "./src/js/modules/pageNav.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -120,6 +154,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -139,7 +174,8 @@ function enterScripts() {
     behavior: 'instant'
   });
   (0,_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordions)();
-  (0,_pageNav__WEBPACK_IMPORTED_MODULE_2__.PageNavs)();
+  (0,_animation__WEBPACK_IMPORTED_MODULE_2__.Animations)();
+  (0,_pageNav__WEBPACK_IMPORTED_MODULE_3__.PageNavs)();
 }
 
 // Scripts to load on every page exit

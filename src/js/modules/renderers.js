@@ -1,6 +1,7 @@
 import { Renderer } from '@unseenco/taxi'
 
 import { Accordions } from './accordion'
+import { Animations } from './animation'
 import { PageNavs } from './pageNav'
 
 // Scripts to load on initial page entry
@@ -14,6 +15,7 @@ function enterScripts() {
     console.log('page entered')
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     Accordions()
+    Animations()
     PageNavs()
 }
 
