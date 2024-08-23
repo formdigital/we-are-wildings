@@ -45,6 +45,12 @@
 
 // Text block width
 [class*="text-block-"] { width: 100%; }
+.text-block-9 { max-width: 9em; }
+.text-block-10 { max-width: 10em; }
+.text-block-20 { max-width: 20em; }
 .text-block-30 { max-width: 30em; }
 .text-block-35 { max-width: 35em; }
 .text-block-40 { max-width: 40em; }
+
+// Overflow
+.overflow-hidden { overflow: hidden; }

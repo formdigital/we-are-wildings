@@ -1,0 +1,53 @@
+.carouselFooter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacer-x);
+    margin-top: var(--spacer-y);
+
+    .nav {
+        display: flex;
+        gap: calc(var(--spacer-x) * 0.5);
+    }
+
+    .prev,
+    .next {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-green);
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    .scrollbar {
+        flex: 1;
+        height: 1px;
+        background: rgba(25,27,25,0.2);
+
+        .swiper-scrollbar-drag {
+            background: var(--color-green);
+        }
+    }
+}
+
+.bg-green {
+
+    .carouselFooter {
+
+        .prev,
+        .next {
+            color: var(--color-white);
+        }
+
+        .scrollbar {
+            background: rgba(240,237,234,0.2);
+
+            .swiper-scrollbar-drag {
+                background: var(--color-white);
+            }
+        }
+    }
+}

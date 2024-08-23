@@ -2,6 +2,7 @@ import Swiper from 'swiper'
 import { Navigation } from 'swiper/modules'
 
 export function PageNavs() {
+    
     const pageNavLinks = document.querySelectorAll('.pageNavLink')
     const pageNavCarousels = document.querySelectorAll('.pageNavCarousel')
 
