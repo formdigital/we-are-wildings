@@ -1421,11 +1421,17 @@ h6 + .btn,
   justify-content: center;
   align-items: center;
   color: var(--color-green);
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 .carouselFooter .prev svg,
 .carouselFooter .next svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.carouselFooter .prev.swiper-button-disabled,
+.carouselFooter .next.swiper-button-disabled {
+  opacity: 0.2;
 }
 .carouselFooter .scrollbar {
   flex: 1;
@@ -1445,6 +1451,127 @@ h6 + .btn,
 }
 .bg-green .carouselFooter .scrollbar .swiper-scrollbar-drag {
   background: var(--color-white);
+}
+
+.testimonialsCarousel {
+  position: relative;
+}
+.testimonialsCarousel::before, .testimonialsCarousel::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(25, 27, 25, 0.2);
+}
+.testimonialsCarousel::before {
+  left: 0;
+  right: 0;
+  top: 4px;
+  bottom: 4px;
+}
+.testimonialsCarousel::after {
+  left: 4px;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+}
+.testimonialsCarousel .swiper-wrapper {
+  align-items: center;
+}
+.testimonialsCarousel .prev,
+.testimonialsCarousel .next {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 720px) {
+  .testimonialsCarousel .prev,
+  .testimonialsCarousel .next {
+    display: flex;
+  }
+}
+.testimonialsCarousel .prev svg,
+.testimonialsCarousel .next svg {
+  width: 100%;
+  height: 100%;
+}
+.testimonialsCarousel .prev {
+  left: var(--spacer-x);
+}
+.testimonialsCarousel .next {
+  right: var(--spacer-x);
+}
+.testimonialsCarousel .pagination {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1rem);
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+}
+@media only screen and (min-width: 720px) {
+  .testimonialsCarousel .pagination {
+    display: none;
+  }
+}
+.testimonialsCarousel .pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--color-green);
+  opacity: 0.2;
+}
+.testimonialsCarousel .pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.testimonialsCarouselSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacer-y-x2) calc(var(--spacer-x) * 1.5);
+}
+@media only screen and (min-width: 720px) {
+  .testimonialsCarouselSlide {
+    padding: var(--spacer-y-x2) calc(var(--spacer-x) * 2 + 1.5rem);
+  }
+}
+.testimonialsCarouselSlide .quote {
+  max-width: 30em;
+  font-size: var(--font-size-md);
+  line-height: 1.3;
+}
+.testimonialsCarouselSlide .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: var(--font-size-md);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.testimonialsCarouselSlide .rating {
+  display: inline-flex;
+  transform: translateY(-0.1em);
+}
+.testimonialsCarouselSlide .rating span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/star.svg?f850a140887ea14342a5d54554278830);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+}
+.testimonialsCarouselSlide .rating span.filled {
+  opacity: 1;
 }
 
 .container {
@@ -2092,6 +2219,45 @@ h6 + .btn,
   background: var(--color-white);
 }
 
+.instaFeedHeader {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: var(--font-size-sm);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.instaFeedHeader .title {
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+.instaFeedHeader a {
+  position: relative;
+  display: inline-block;
+}
+.instaFeedHeader a::before, .instaFeedHeader a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+.instaFeedHeader a::before {
+  background: rgba(25, 27, 25, 0.1);
+}
+.instaFeedHeader a::after {
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.instaFeedHeader a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .siteMenuToggle {
   display: flex;
   flex-direction: column;
@@ -2255,6 +2421,42 @@ h6 + .richtext {
   max-width: 16em;
   font-size: var(--font-size-md);
   line-height: 1.3;
+}
+.newsCarouselFilter {
+  display: inline-flex;
+  gap: 0.2em;
+}
+.newsCarouselFilter button,
+.newsCarouselFilter span {
+  display: inline-block;
+  font-size: inherit;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--color-green);
+}
+.newsCarouselFilter button {
+  position: relative;
+}
+.newsCarouselFilter button::before, .newsCarouselFilter button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+.newsCarouselFilter button::before {
+  background: rgba(25, 27, 25, 0.1);
+}
+.newsCarouselFilter button::after {
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.newsCarouselFilter button:hover::after, .newsCarouselFilter button.mixitup-control-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .newsCarousel .carouselFooter {
   margin-top: var(--spacer-y-x2);

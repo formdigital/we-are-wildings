@@ -44,6 +44,54 @@
 
     &Carousel {
 
+        &Filter {
+            display: inline-flex;
+            gap: 0.2em;
+
+            button,
+            span {
+                display: inline-block;
+                font-size: inherit;
+                text-transform: uppercase;
+                line-height: 1.1;
+                color: var(--color-green);
+            }
+
+            button {
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                }
+    
+                &::before {
+                    background: rgba(25,27,25,0.1);
+                }
+    
+                &::after {
+                    background: currentColor;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+                }
+    
+                &:hover,
+                &.mixitup-control-active {
+    
+                    &::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
+
         .carouselFooter {
             margin-top: var(--spacer-y-x2);
         }

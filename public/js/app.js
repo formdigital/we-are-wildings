@@ -94,11 +94,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mixitup */ "./node_modules/mixitup/dist/mixitup.js");
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(mixitup__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 function Carousels() {
   var accommodationCarousels = document.querySelectorAll('.accommodationCarousel');
   var newsCarousels = document.querySelectorAll('.newsCarousel');
+  var testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel');
   accommodationCarousels.forEach(function (carousel) {
     var prevBtn = carousel.querySelector('.prev');
     var nextBtn = carousel.querySelector('.next');
@@ -172,6 +176,50 @@ function Carousels() {
           slidesPerView: 4,
           spaceBetween: 24
         }
+      }
+    });
+
+    // Carousel filtering
+    var filter = carousel.querySelector('.mix-container');
+    if (filter) {
+      var mixer = mixitup__WEBPACK_IMPORTED_MODULE_2___default()(filter, {
+        load: {
+          filter: '.mix-category-news'
+        },
+        animation: {
+          effects: 'fade translateX(200px) stagger(50ms)',
+          duration: 400,
+          reverseOut: true,
+          nudge: false
+        },
+        callbacks: {
+          onMixStart: function onMixStart() {
+            newsCarouselSwiper.setProgress(0, 100);
+          },
+          onMixEnd: function onMixEnd() {
+            newsCarouselSwiper.update();
+          }
+        }
+      });
+    }
+  });
+  testimonialsCarousels.forEach(function (carousel) {
+    var prevBtn = carousel.querySelector('.prev');
+    var nextBtn = carousel.querySelector('.next');
+    var pagination = carousel.querySelector('.pagination');
+    var testimonialsCarouselSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](carousel, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn
+      },
+      pagination: {
+        el: pagination
       }
     });
   });

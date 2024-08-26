@@ -1,10 +1,12 @@
 import Swiper from 'swiper'
-import { Navigation, Scrollbar } from 'swiper/modules'
+import { EffectFade, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import mixitup from 'mixitup'
 
 export function Carousels() {
 
     const accommodationCarousels = document.querySelectorAll('.accommodationCarousel')
     const newsCarousels = document.querySelectorAll('.newsCarousel')
+    const testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel')
     
     accommodationCarousels.forEach(carousel => {
         const prevBtn = carousel.querySelector('.prev')
@@ -80,6 +82,53 @@ export function Carousels() {
                     slidesPerView: 4,
                     spaceBetween: 24,
                 },
+            },
+        })
+
+        // Carousel filtering
+        const filter = carousel.querySelector('.mix-container')
+
+        if (filter) {
+        
+            const mixer = mixitup(filter, {
+                load: {
+                    filter: '.mix-category-news'
+                },
+                animation: {
+                    effects: 'fade translateX(200px) stagger(50ms)',
+                    duration: 400,
+                    reverseOut: true,
+                    nudge: false,
+                },
+                callbacks: {
+                    onMixStart: function() {
+                        newsCarouselSwiper.setProgress(0, 100)
+                    },
+                    onMixEnd: function() {
+                        newsCarouselSwiper.update()
+                    },
+                }
+            })
+        }
+    })
+    
+    testimonialsCarousels.forEach(carousel => {
+        const prevBtn = carousel.querySelector('.prev')
+        const nextBtn = carousel.querySelector('.next')
+        const pagination = carousel.querySelector('.pagination')
+        const testimonialsCarouselSwiper = new Swiper(carousel, {
+            modules: [EffectFade,Navigation,Pagination],
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            navigation: {
+                prevEl: prevBtn,
+                nextEl: nextBtn,
+            },
+            pagination: {
+                el: pagination,
             },
         })
     })
