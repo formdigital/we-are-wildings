@@ -6,6 +6,7 @@
     align-items: center;
     height: var(--btn-height);
     padding: 0 calc(var(--btn-height) * 0.5);
+    font-family: var(--font-sans);
     font-weight: 500;
     font-size: 0.7rem;
     text-align: center;
@@ -28,6 +29,20 @@
 
     &Sm {
         --btn-height: 1.75rem;
+    }
+}
+
+.bg-green {
+
+    .btn {
+        color: var(--color-green);
+        background: var(--color-white);
+
+        &Stroke {
+            color: var(--color-white);
+            border: 1px solid rgba(240,237,234,0.2);
+            background: transparent;
+        }
     }
 }
 

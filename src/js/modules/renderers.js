@@ -3,6 +3,7 @@ import { Renderer } from '@unseenco/taxi'
 import { Accordions } from './accordion'
 import { Animations } from './animation'
 import { Carousels } from './carousel'
+import { Menu } from './menu'
 import { PageNavs } from './pageNav'
 
 // Scripts to load on initial page entry
@@ -18,6 +19,7 @@ function enterScripts() {
     Accordions()
     Animations()
     Carousels()
+    Menu()
     PageNavs()
 }
 

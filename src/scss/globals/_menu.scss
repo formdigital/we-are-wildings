@@ -1,4 +1,147 @@
 .siteMenu {
+    position: fixed;
+    z-index: 5000;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    &Close {
+        position: absolute;
+        z-index: 20;
+        left: var(--spacer-y);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-white);
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &Main,
+    &Nav,
+    &Contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &Main {
+        gap: var(--spacer-y-x2);
+        width: 100%;
+        padding: var(--spacer-y-x4) var(--spacer-x) var(--spacer-y-x2) var(--spacer-x);
+
+        @include md-breakpoint {
+            width: 50%;
+        }
+    }
+
+    &Nav {
+        flex: 1;
+        justify-content: center;
+        font-size: var(--font-size-xl);
+        visibility: hidden;
+
+        a {
+            visibility: visible;
+
+            &:not(.btn) {
+                padding: 0.25em 0;
+                line-height: 1;
+                color: var(--color-white);
+                transition: color 0.6s ease;
+            }
+
+            &.btn {
+                margin-top: calc(var(--font-size-xl) * 0.5);
+            }
+        }
+
+        &:hover {
+
+            a:not(.btn) {
+                color: var(--color-green-light);
+
+                &:hover {
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+
+    &Contacts {
+        gap: 0.5em;
+        letter-spacing: 0.05em;
+
+        a {
+            position: relative;
+            display: block;
+            color: var(--color-green-light);
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+            }
+
+            &::before {
+                background: rgba(240,237,234,0.1);
+            }
+
+            &::after {
+                background: currentColor;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+            }
+
+            &:hover {
+
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+
+    &Images {
+        position: relative;
+        display: none;
+        width: 50%;
+
+        @include md-breakpoint {
+            display: block;
+        }
+
+        .image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
 
     &Toggle {
         display: flex;
@@ -14,6 +157,23 @@
             width: 100%;
             height: 1px;
             background: var(--color-green);
+        }
+    }
+}
+
+body {
+    
+    &.siteMenu {
+        
+        &Opening,
+        &Closing {
+
+            .siteMenu {
+
+                &Toggle {
+                    pointer-events: none;
+                }
+            }
         }
     }
 }

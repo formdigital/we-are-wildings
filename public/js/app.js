@@ -227,6 +227,124 @@ function Carousels() {
 
 /***/ }),
 
+/***/ "./src/js/modules/menu.js":
+/*!********************************!*\
+  !*** ./src/js/modules/menu.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Menu: () => (/* binding */ Menu),
+/* harmony export */   MenuClose: () => (/* binding */ MenuClose),
+/* harmony export */   MenuOpen: () => (/* binding */ MenuOpen),
+/* harmony export */   MenuReset: () => (/* binding */ MenuReset)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+function Menu() {
+  var siteMenuToggles = document.querySelectorAll('.siteMenuToggle');
+  MenuReset();
+  siteMenuToggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      if (document.body.classList.contains('siteMenuOpen')) {
+        MenuClose();
+      } else {
+        MenuOpen();
+      }
+    });
+  });
+
+  // Update images on link hover
+  var siteMenuLinks = document.querySelectorAll('.siteMenuNav a:not(.btn)');
+  var siteMenuImages = document.querySelector('.siteMenuImages');
+  siteMenuLinks.forEach(function (link) {
+    var id = link.dataset.image;
+    var image = siteMenuImages.querySelector("#".concat(id));
+    var activeImage;
+    if (link.classList.contains('active')) {
+      image.classList.add('active');
+    }
+    link.addEventListener('mouseenter', function () {
+      activeImage = siteMenuImages.querySelector('.active');
+      if (!image.classList.contains('active')) {
+        activeImage.classList.remove('active');
+        image.classList.add('active');
+      }
+    });
+  });
+}
+function MenuOpen() {
+  var siteMenu = document.querySelector('.siteMenu');
+  document.body.classList.add('siteMenuOpen');
+  var menuOpenTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    onStart: function onStart() {
+      document.body.classList.add('siteMenuOpening');
+    },
+    onComplete: function onComplete() {
+      document.body.classList.remove('siteMenuOpening');
+    }
+  });
+  menuOpenTimeline.set(siteMenu, {
+    delay: 0.3,
+    autoAlpha: 1
+  });
+  menuOpenTimeline.to(siteMenu, {
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    duration: 0.6,
+    ease: 'power3.inOut'
+  });
+  menuOpenTimeline.to('.siteMenu__fadeIn', {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+    stagger: 0.1
+  });
+  console.log('open menu');
+}
+function MenuClose() {
+  var siteMenu = document.querySelector('.siteMenu');
+  var menuCloseTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    onStart: function onStart() {
+      document.body.classList.add('siteMenuClosing');
+    },
+    onComplete: function onComplete() {
+      document.body.classList.remove('siteMenuClosing');
+      document.body.classList.remove('siteMenuOpen');
+    }
+  });
+  menuCloseTimeline.to('.siteMenu__fadeIn', {
+    autoAlpha: 0,
+    duration: 0.6,
+    ease: 'power2.inOut'
+  });
+  menuCloseTimeline.to(siteMenu, {
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+    duration: 0.6,
+    ease: 'power3.inOut'
+  });
+  menuCloseTimeline.set('.siteMenu__fadeIn', {
+    y: 30
+  });
+  menuCloseTimeline.set(siteMenu, {
+    autoAlpha: 0
+  });
+  console.log('close menu');
+}
+function MenuReset() {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.siteMenu', {
+    autoAlpha: 0,
+    clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set('.siteMenu__fadeIn', {
+    autoAlpha: 0,
+    y: 30
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/modules/pageNav.js":
 /*!***********************************!*\
   !*** ./src/js/modules/pageNav.js ***!
@@ -286,7 +404,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion */ "./src/js/modules/accordion.js");
 /* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./animation */ "./src/js/modules/animation.js");
 /* harmony import */ var _carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./carousel */ "./src/js/modules/carousel.js");
-/* harmony import */ var _pageNav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pageNav */ "./src/js/modules/pageNav.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu */ "./src/js/modules/menu.js");
+/* harmony import */ var _pageNav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pageNav */ "./src/js/modules/pageNav.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -300,6 +419,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -323,7 +443,8 @@ function enterScripts() {
   (0,_accordion__WEBPACK_IMPORTED_MODULE_1__.Accordions)();
   (0,_animation__WEBPACK_IMPORTED_MODULE_2__.Animations)();
   (0,_carousel__WEBPACK_IMPORTED_MODULE_3__.Carousels)();
-  (0,_pageNav__WEBPACK_IMPORTED_MODULE_4__.PageNavs)();
+  (0,_menu__WEBPACK_IMPORTED_MODULE_4__.Menu)();
+  (0,_pageNav__WEBPACK_IMPORTED_MODULE_5__.PageNavs)();
 }
 
 // Scripts to load on every page exit

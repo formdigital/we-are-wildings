@@ -13,6 +13,8 @@
         <main data-taxi>
             <div data-taxi-view>
 
+                <?php include "menu.php"; ?>
+
                 <header class="siteHeader <?php if (isset($invertHeader) && $invertHeader == 'true') {echo 'siteHeaderInverted';} ?>">
 
                     <div class="left">
