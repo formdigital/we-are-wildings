@@ -1,9 +1,11 @@
 <?php include "includes/header.php"; ?>
 
-<div class="px-1 py-5 text-center">
-    <h1 class="serif font-size-3xl uppercase">Get in touch</h1>
-    <div class="richtext text-block-35">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tellus neque, vitae faucibus sapien lacinia et. Vivamus volutpat pretium urna sit amet convallis. Aliquam molestie, ipsum quis ullamcorper accumsan, sapien augue porta odio, eu tincidunt purus urna sit amet erat.</p>
+<div class="px-1 offsetHeader">
+    <div class="py-5 text-center">
+        <h1 class="serif font-size-3xl uppercase">Get in touch</h1>
+        <div class="richtext text-block-35">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tellus neque, vitae faucibus sapien lacinia et. Vivamus volutpat pretium urna sit amet convallis. Aliquam molestie, ipsum quis ullamcorper accumsan, sapien augue porta odio, eu tincidunt purus urna sit amet erat.</p>
+        </div>
     </div>
 </div>
 

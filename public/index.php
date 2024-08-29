@@ -252,7 +252,6 @@
     <div class="pt-3 pb-4 text-center">
         <a class="btn" href="news.php">View all News & Events</a>
     </div>
-    </div>
 </div>
 
 <div class="px-1 text-center">

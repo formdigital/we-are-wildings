@@ -37,3 +37,8 @@
         }
     }
 }
+
+.offsetHeader {
+    --header-height: calc((var(--spacer-y) * 1.5) + 2.5rem);
+    padding-top: var(--header-height);
+}

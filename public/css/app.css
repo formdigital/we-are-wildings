@@ -1101,6 +1101,11 @@ html.lenis, html.lenis body {
   border: 1px solid rgba(240, 237, 234, 0.1);
 }
 
+.offsetHeader {
+  --header-height: calc((var(--spacer-y) * 1.5) + 2.5rem);
+  padding-top: var(--header-height);
+}
+
 .siteFooter {
   border-top: 1px solid rgba(25, 27, 25, 0.1);
 }
@@ -1472,6 +1477,7 @@ h6 + .btn,
   content: "";
   position: absolute;
   border: 1px solid rgba(25, 27, 25, 0.2);
+  border-radius: 0.25rem;
 }
 .testimonialsCarousel::before {
   left: 0;
@@ -2409,10 +2415,115 @@ body.siteMenuOpening .siteMenuToggle, body.siteMenuClosing .siteMenuToggle {
   pointer-events: none;
 }
 
+.richtext h1,
+.richtext h2,
+.richtext h3,
+.richtext h4,
+.richtext h5,
+.richtext h6 {
+  margin: 0 0 0.9rem 0;
+}
+.richtext h2 {
+  font-size: var(--font-size-xl);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.richtext h3 {
+  font-size: var(--font-size-lg);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.richtext h4 {
+  font-size: var(--font-size-md);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.richtext h5 {
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+.richtext h6 {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
 .richtext p,
 .richtext ol,
 .richtext ul {
-  margin: 0 0 1em 0;
+  margin: 0 0 1.2em 0;
+  line-height: 1.5;
+}
+.richtext p a,
+.richtext ol a,
+.richtext ul a {
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.4s ease;
+}
+.richtext p a:hover,
+.richtext ol a:hover,
+.richtext ul a:hover {
+  color: var(--color-yellow);
+}
+.richtext p + h1,
+.richtext p + h2,
+.richtext p + h3,
+.richtext p + h4,
+.richtext p + h5,
+.richtext p + h6,
+.richtext ol + h1,
+.richtext ol + h2,
+.richtext ol + h3,
+.richtext ol + h4,
+.richtext ol + h5,
+.richtext ol + h6,
+.richtext ul + h1,
+.richtext ul + h2,
+.richtext ul + h3,
+.richtext ul + h4,
+.richtext ul + h5,
+.richtext ul + h6 {
+  margin-top: 2.7rem;
+}
+.richtext ol,
+.richtext ul {
+  padding: 0;
+  list-style: none;
+}
+.richtext ol li,
+.richtext ul li {
+  position: relative;
+  padding-left: 2em;
+}
+.richtext ol li::before,
+.richtext ul li::before {
+  position: absolute;
+  left: 0.25em;
+}
+.richtext ol li:not(:last-child),
+.richtext ul li:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+.richtext ol {
+  counter-reset: ol-counter;
+}
+.richtext ol li {
+  counter-increment: ol-counter;
+}
+.richtext ol li::before {
+  content: counter(ol-counter) ".";
+}
+.richtext ul li::before {
+  content: "";
+  display: block;
+  top: 0.625em;
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  background: currentColor;
 }
 .richtext > *:last-child {
   margin-bottom: 0;

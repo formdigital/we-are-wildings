@@ -1,9 +1,118 @@
 .richtext {
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 0.9rem 0;
+    }
+
+    h2 {
+        font-size: var(--font-size-xl);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+    }
+
+    h3 {
+        font-size: var(--font-size-lg);
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    h4 {
+        font-size: var(--font-size-md);
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+    }
+
+    h5 {
+        font-weight: 500;
+        font-size: var(--font-size-base);
+        line-height: 1.5;
+        letter-spacing: -0.02em;
+    }
+
+    h6 {
+        font-size: var(--font-size-sm);
+        text-transform: uppercase;
+        line-height: 1.3;
+        letter-spacing: 0.05em;
+    }
+
     p,
     ol,
     ul {
-        margin: 0 0 1em 0;
+        margin: 0 0 1.2em 0;
+        line-height: 1.5;
+
+        a {
+            font-weight: 500;
+            text-decoration: underline;
+            transition: color 0.4s ease;
+
+            &:hover {
+                color: var(--color-yellow);
+            }
+        }
+
+        + h1,
+        + h2,
+        + h3,
+        + h4,
+        + h5,
+        + h6 {
+            margin-top: 2.7rem;
+        }
+    }
+
+    ol,
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 2em;
+
+            &::before {
+                position: absolute;
+                left: 0.25em;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 0.6em;
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ol-counter;
+
+        li {
+            counter-increment: ol-counter;
+
+            &::before {
+                content: counter(ol-counter) '.';
+            }
+        }
+    }
+
+    ul {
+
+        li {
+
+            &::before {
+                content: '';
+                display: block;
+                top: 0.625em;
+                width: 0.25em;
+                height: 0.25em;
+                border-radius: 50%;
+                background: currentColor;
+            }
+        }
     }
 
     > *:last-child {
