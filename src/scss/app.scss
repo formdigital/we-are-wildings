@@ -41,12 +41,14 @@
     --color-dark: #191b19;
 
     // Spacing
+    --gutter-x: clamp(16px, 0.4vi + 14.4px, 24px);
     --spacer-x: clamp(16px, 1.6vi + 9.6px, 48px);
     --spacer-y: clamp(16px, 0.8vi + 12.8px, 32px);
     --spacer-y-x2: calc(var(--spacer-y) * 2);
     --spacer-y-x3: calc(var(--spacer-y) * 3);
     --spacer-y-x4: calc(var(--spacer-y) * 4);
     --spacer-y-x5: calc(var(--spacer-y) * 5);
+    --spacer-y-x6: calc(var(--spacer-y) * 6);
 }
 
 // Vendor styles

@@ -64,9 +64,9 @@ $container-width: 2000px !default;
     
     @for $i from 1 through $grid-columns {
         .col#{$size}-#{$i} {
-        $col-width: (math.div(100%, $grid-columns) * $i);
-        flex-basis: $col-width;
-        max-width: $col-width;
+            $col-width: (math.div(100%, $grid-columns) * $i);
+            flex-basis: $col-width;
+            max-width: $col-width;
         }
     }
 }
@@ -87,6 +87,25 @@ $container-width: 2000px !default;
     margin: 0 auto;
     padding-right: $column-gutter;
     padding-left: $column-gutter;
+
+    &.no-gutters {
+        padding-right: 0;
+        padding-left: 0;
+
+        .row {
+
+            &:not(&--no-gutters):not(&--compact) {
+            margin-right: 0;
+            margin-left: 0;
+            
+                & > .col,
+                & > [class^='col-'] {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
 
 .container-fluid {

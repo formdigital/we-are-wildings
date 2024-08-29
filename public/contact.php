@@ -1,7 +1,7 @@
-<?php include "includes/header.php"; ?>
+<?php $page = "contact"; include "includes/header.php"; ?>
 
 <div class="px-1 offsetHeader">
-    <div class="py-5 text-center">
+    <div class="py-6 text-center">
         <h1 class="serif font-size-3xl uppercase">Get in touch</h1>
         <div class="richtext text-block-35">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tellus neque, vitae faucibus sapien lacinia et. Vivamus volutpat pretium urna sit amet convallis. Aliquam molestie, ipsum quis ullamcorper accumsan, sapien augue porta odio, eu tincidunt purus urna sit amet erat.</p>
@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<div class="py-5">
+<div class="py-6">
     <div class="px-1 pb-2 text-center">
         <h2 class="serif font-size-2xl uppercase">FAQ's</h2>
     </div>
@@ -63,7 +63,7 @@
         <button class="next"><svg><use href="images/icons.svg#circle-arrow-right"/></svg></button>
     </div>
     <div class="px-1 pt-3">
-        <div class="container">
+        <div class="container no-gutters">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
 

@@ -3,6 +3,7 @@ import { Renderer } from '@unseenco/taxi'
 import { Accordions } from './accordion'
 import { Animations } from './animation'
 import { Carousels } from './carousel'
+import { Filters } from './filter'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
 
@@ -19,6 +20,7 @@ function enterScripts() {
     Accordions()
     Animations()
     Carousels()
+    Filters()
     Menu()
     PageNavs()
 }

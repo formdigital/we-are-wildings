@@ -1,9 +1,9 @@
-<?php include "includes/header.php"; ?>
+<?php $page = "terms"; include "includes/header.php"; ?>
 
 <div class="px-1 offsetHeader">
-    <div class="py-5">
+    <div class="py-6">
         <h1 class="serif font-size-3xl uppercase text-center">Terms & Conditions</h1>
-        <div class="container pt-3">
+        <div class="container no-gutters pt-5">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                     <div class="richtext">
