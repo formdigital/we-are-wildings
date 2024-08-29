@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--spacer-y) * 0.25);
+
+    &Btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp(32px, 0.8vi + 28.8px, 48px);
+        height: clamp(32px, 0.8vi + 28.8px, 48px);
+        color: var(--color-green);
+        border: 1px solid transparent;
+        border-radius: 50%;
+
+        svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        &.prev {
+            margin-right: var(--spacer-y);
+        }
+
+        &.next {
+            margin-left: var(--spacer-y);
+        }
+
+        &.active {
+            border: 1px solid currentColor;
+        }
+
+        &.disabled {
+            opacity: 0.2;
+            cursor: not-allowed;
+        }
+    }
+}

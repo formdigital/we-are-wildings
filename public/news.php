@@ -163,6 +163,28 @@
                 </a>
             </div>
         </div>
+        <div class="pagination pt-5">
+            <a class="paginationBtn prev disabled" href="#">
+                <svg><use href="images/icons.svg#arrow-left"/></svg>
+            </a>
+            <a class="paginationBtn active" href="#">1</a>
+            <a class="paginationBtn" href="#">2</a>
+            <a class="paginationBtn" href="#">3</a>
+            <a class="paginationBtn" href="#">4</a>
+            <a class="paginationBtn next" href="#">
+                <svg><use href="images/icons.svg#arrow-right"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="py-4 bt-light">
+    <div class="instaFeedHeader px-1">
+        <h2 class="title">Follow on Instagram</h2>
+        <a href="#" target="_blank">@wearewildings</a>
+    </div>
+    <div class="instaFeed">
+
     </div>
 </div>
 

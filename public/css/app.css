@@ -1084,6 +1084,14 @@ html.lenis, html.lenis body {
   overflow: hidden;
 }
 
+.bt-light {
+  border-top: 1px solid rgba(25, 27, 25, 0.1);
+}
+
+.bb-light {
+  border-bottom: 1px solid rgba(25, 27, 25, 0.1);
+}
+
 .siteHeader {
   position: absolute;
   z-index: 1000;
@@ -1401,12 +1409,17 @@ h6 + .accordionContainer {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-white);
+  border: 1px solid transparent;
   border-radius: 0.25rem;
   background: var(--color-green);
 }
 .btnSecondary {
   color: var(--color-green);
   background: var(--color-offwhite);
+}
+.btnSecondary.mixitup-control-active {
+  border: 1px solid currentColor;
+  background: transparent;
 }
 .btnStroke {
   color: var(--color-green);
@@ -2440,6 +2453,40 @@ h6 + .btn,
 
 body.siteMenuOpening .siteMenuToggle, body.siteMenuClosing .siteMenuToggle {
   pointer-events: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--spacer-y) * 0.25);
+}
+.paginationBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(32px, 0.8vi + 28.8px, 48px);
+  height: clamp(32px, 0.8vi + 28.8px, 48px);
+  color: var(--color-green);
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.paginationBtn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.paginationBtn.prev {
+  margin-right: var(--spacer-y);
+}
+.paginationBtn.next {
+  margin-left: var(--spacer-y);
+}
+.paginationBtn.active {
+  border: 1px solid currentColor;
+}
+.paginationBtn.disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 
 .richtext h1,

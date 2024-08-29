@@ -13,12 +13,18 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-white);
+    border: 1px solid transparent;
     border-radius: 0.25rem;
     background: var(--color-green);
 
     &Secondary {
         color: var(--color-green);
         background: var(--color-offwhite);
+
+        &.mixitup-control-active {
+            border: 1px solid currentColor;
+            background: transparent;
+        }
     }
 
     &Stroke {
