@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Carousels() {
   var articleGalleries = document.querySelectorAll('.articleGallery');
+  var articleGalleriesFull = document.querySelectorAll('.articleGalleryFull');
+  var articleReviews = document.querySelectorAll('.articleReviews');
   var accommodationCarousels = document.querySelectorAll('.accommodationCarousel');
   var newsCarousels = document.querySelectorAll('.newsCarousel');
   var testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel');
@@ -124,6 +126,63 @@ function Carousels() {
       pagination: {
         el: pagination,
         clickable: true
+      }
+    });
+  });
+  articleGalleriesFull.forEach(function (carousel) {
+    var prevBtn = carousel.querySelector('.prev');
+    var nextBtn = carousel.querySelector('.next');
+    var scrollbar = carousel.querySelector('.scrollbar');
+    var articleGalleryFullSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](carousel, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.FreeMode, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Scrollbar],
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      freeMode: true,
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn
+      },
+      scrollbar: {
+        el: scrollbar,
+        draggable: true
+      },
+      breakpoints: {
+        600: {
+          spaceBetween: 15
+        },
+        800: {
+          spaceBetween: 18
+        },
+        1000: {
+          spaceBetween: 21
+        },
+        1200: {
+          spaceBetween: 24
+        }
+      }
+    });
+  });
+  articleReviews.forEach(function (container) {
+    var carousel = container.querySelector('.articleReviewsCarousel');
+    var prevBtn = container.querySelector('.prev');
+    var nextBtn = container.querySelector('.next');
+    var pagination = container.querySelector('.articleReviewsPagination');
+    var articleReviewsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](carousel, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      slidesPerView: 1,
+      autoHeight: true,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn
+      },
+      pagination: {
+        el: pagination,
+        type: 'fraction'
       }
     });
   });
@@ -438,6 +497,17 @@ function PageNavs() {
       }
     });
   });
+  if (document.querySelector('.heroFull + .pageNavContainer')) {
+    var showHeroPageNav = function showHeroPageNav() {
+      heroHeight = "".concat(window.innerHeight - nav.offsetHeight, "px");
+      hero.style.minHeight = heroHeight;
+    };
+    var hero = document.querySelector('.heroFull');
+    var nav = document.querySelector('.heroFull + .pageNavContainer > .pageNavSticky');
+    var heroHeight;
+    showHeroPageNav();
+    window.addEventListener('resize', showHeroPageNav);
+  }
 }
 
 /***/ }),

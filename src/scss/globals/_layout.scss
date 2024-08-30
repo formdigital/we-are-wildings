@@ -1,5 +1,6 @@
 .hero {
     --header-height: calc((var(--spacer-y) * 1.5) + 2.5rem);
+
     position: relative;
     display: flex;
     flex-direction: column;

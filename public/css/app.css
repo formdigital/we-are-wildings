@@ -1123,10 +1123,6 @@ html.lenis, html.lenis body {
 .siteHeaderInverted .siteMenuToggle span {
   background: var(--color-white);
 }
-.siteHeaderInverted .btnStroke {
-  color: var(--color-white);
-  border: 1px solid rgba(240, 237, 234, 0.1);
-}
 
 .offsetHeader {
   --header-height: calc((var(--spacer-y) * 1.5) + 2.5rem);
@@ -1401,6 +1397,8 @@ h6 + .accordionContainer {
 
 .btn {
   --btn-height: 2.5rem;
+  --btn-color: var(--color-white);
+  --btn-background: var(--color-green);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1412,23 +1410,34 @@ h6 + .accordionContainer {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-white);
-  border: 1px solid transparent;
+  color: var(--btn-color);
+  border: 1px solid var(--btn-background);
   border-radius: 0.25rem;
-  background: var(--color-green);
+  background: var(--btn-background);
+  transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease;
+}
+.btn:not(.btnStatic):hover {
+  color: var(--btn-background);
+  border: 1px solid var(--btn-background);
+  background: transparent;
 }
 .btnSecondary {
-  color: var(--color-green);
-  background: var(--color-offwhite);
+  --btn-color: var(--color-green);
+  --btn-background: var(--color-offwhite);
 }
 .btnSecondary.mixitup-control-active {
   border: 1px solid currentColor;
   background: transparent;
 }
 .btnStroke {
-  color: var(--color-green);
+  color: var(--btn-background);
   border: 1px solid rgba(25, 27, 25, 0.2);
   background: transparent;
+}
+.btnStroke:not(.btnStatic):hover {
+  color: var(--btn-color);
+  border: 1px solid var(--btn-background);
+  background: var(--btn-background);
 }
 .btnSm {
   --btn-height: 1.75rem;
@@ -1449,14 +1458,24 @@ h6 + .accordionContainer {
   height: calc(var(--gutter-x) * 1.5);
 }
 
-.bg-green .btn {
-  color: var(--color-green);
-  background: var(--color-white);
+.bg-green .btn,
+.hero .btn,
+.siteHeaderInverted .btn {
+  --btn-color: var(--color-green);
+  --btn-background: var(--color-white);
 }
-.bg-green .btnStroke {
-  color: var(--color-white);
+.bg-green .btnStroke,
+.hero .btnStroke,
+.siteHeaderInverted .btnStroke {
   border: 1px solid rgba(240, 237, 234, 0.2);
   background: transparent;
+}
+.bg-green .btnStroke:not(.btnStatic):hover,
+.hero .btnStroke:not(.btnStatic):hover,
+.siteHeaderInverted .btnStroke:not(.btnStatic):hover {
+  color: var(--btn-color);
+  border: 1px solid var(--btn-background);
+  background: var(--btn-background);
 }
 
 h1 + .btn,
@@ -1471,6 +1490,7 @@ h6 + .btn,
 
 .carouselFooter {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: var(--spacer-x);
   margin-top: var(--spacer-y);
@@ -2348,6 +2368,7 @@ h6 + .btn,
   position: absolute;
   z-index: 20;
   left: var(--spacer-y);
+  top: var(--spacer-y);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2375,25 +2396,26 @@ h6 + .btn,
 .siteMenuNav {
   flex: 1;
   justify-content: center;
+  gap: calc(var(--font-size-xl) * 0.5);
   font-size: var(--font-size-xl);
+}
+.siteMenuNav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   visibility: hidden;
 }
-.siteMenuNav a {
+.siteMenuNav ul li a {
   visibility: visible;
-}
-.siteMenuNav a:not(.btn) {
   padding: 0.25em 0;
   line-height: 1;
   color: var(--color-white);
   transition: color 0.6s ease;
 }
-.siteMenuNav a.btn {
-  margin-top: calc(var(--font-size-xl) * 0.5);
-}
-.siteMenuNav:hover a:not(.btn) {
+.siteMenuNav ul:hover li a {
   color: var(--color-green-light);
 }
-.siteMenuNav:hover a:not(.btn):hover {
+.siteMenuNav ul:hover li a:hover {
   color: var(--color-white);
 }
 .siteMenuContacts {
@@ -2673,18 +2695,43 @@ h6 + .richtext {
 .articleHero + .articleHeroImage {
   margin-top: var(--spacer-y-x4);
 }
+.articleMain + .articleGalleryFull {
+  margin-top: var(--spacer-y-x4);
+}
+.articleBreak {
+  border-top: 1px solid rgba(25, 27, 25, 0.1);
+}
+.articleBreak + .articleBody,
+.articleBreak + .articleQuote,
+.articleBreak + .articleReviews,
+.articleBreak + .articleGallery,
+.articleBreak + .articleImage,
+.articleBreak + .articleVideo,
+.articleBreak + .articleLinks {
+  margin-top: var(--spacer-y-x3);
+}
 .articleBody + .articleBody,
-.articleBody + .articleQuote, .articleQuote + .articleBody,
-.articleQuote + .articleQuote {
+.articleBody + .articleQuote,
+.articleBody + .articleReviews, .articleQuote + .articleBody,
+.articleQuote + .articleQuote,
+.articleQuote + .articleReviews, .articleReviews + .articleBody,
+.articleReviews + .articleQuote,
+.articleReviews + .articleReviews {
   margin-top: var(--spacer-y-x2);
 }
+.articleBody + .articleBreak,
 .articleBody + .articleGallery,
 .articleBody + .articleImage,
 .articleBody + .articleVideo,
-.articleBody + .articleLinks, .articleQuote + .articleGallery,
+.articleBody + .articleLinks, .articleQuote + .articleBreak,
+.articleQuote + .articleGallery,
 .articleQuote + .articleImage,
 .articleQuote + .articleVideo,
-.articleQuote + .articleLinks {
+.articleQuote + .articleLinks, .articleReviews + .articleBreak,
+.articleReviews + .articleGallery,
+.articleReviews + .articleImage,
+.articleReviews + .articleVideo,
+.articleReviews + .articleLinks {
   margin-top: var(--spacer-y-x3);
 }
 .articleQuote {
@@ -2703,27 +2750,74 @@ h6 + .richtext {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.articleReviewsCarousel {
+  overflow: hidden;
+  padding: calc(var(--gutter-x) * 2) calc(var(--spacer-y) * 1.5);
+  border-radius: 0.25rem;
+  background: rgba(224, 218, 213, 0.5);
+}
+.articleReviewsCarousel .quote {
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+}
+.articleReviewsCarousel .details {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: var(--font-size-md);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.articleReviewsCarousel .rating {
+  display: inline-flex;
+  transform: translateY(-0.1em);
+}
+.articleReviewsCarousel .rating span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/star.svg?f850a140887ea14342a5d54554278830);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+}
+.articleReviewsCarousel .rating span.filled {
+  opacity: 1;
+}
+.articleReviewsPagination {
+  width: auto;
+}
 .articleGallery, .articleImage, .articleVideo, .articleLinks {
   overflow: hidden;
   border-radius: 0.25rem;
 }
+.articleGallery + .articleBreak,
 .articleGallery + .articleBody,
-.articleGallery + .articleQuote, .articleImage + .articleBody,
-.articleImage + .articleQuote, .articleVideo + .articleBody,
-.articleVideo + .articleQuote, .articleLinks + .articleBody,
+.articleGallery + .articleQuote, .articleImage + .articleBreak,
+.articleImage + .articleBody,
+.articleImage + .articleQuote, .articleVideo + .articleBreak,
+.articleVideo + .articleBody,
+.articleVideo + .articleQuote, .articleLinks + .articleBreak,
+.articleLinks + .articleBody,
 .articleLinks + .articleQuote {
   margin-top: var(--spacer-y-x3);
 }
+.articleGallery + .articleReviews,
 .articleGallery + .articleGallery,
 .articleGallery + .articleImage,
 .articleGallery + .articleVideo,
-.articleGallery + .articleLinks, .articleImage + .articleGallery,
+.articleGallery + .articleLinks, .articleImage + .articleReviews,
+.articleImage + .articleGallery,
 .articleImage + .articleImage,
 .articleImage + .articleVideo,
-.articleImage + .articleLinks, .articleVideo + .articleGallery,
+.articleImage + .articleLinks, .articleVideo + .articleReviews,
+.articleVideo + .articleGallery,
 .articleVideo + .articleImage,
 .articleVideo + .articleVideo,
-.articleVideo + .articleLinks, .articleLinks + .articleGallery,
+.articleVideo + .articleLinks, .articleLinks + .articleReviews,
+.articleLinks + .articleGallery,
 .articleLinks + .articleImage,
 .articleLinks + .articleVideo,
 .articleLinks + .articleLinks {
@@ -2774,6 +2868,21 @@ h6 + .richtext {
 }
 .articleGallery img {
   border-radius: 0.25rem;
+}
+.articleGalleryFull .swiper-wrapper,
+.articleGalleryFull .swiper-slide {
+  height: auto;
+}
+.articleGalleryFull .swiper-slide {
+  width: auto;
+}
+.articleGalleryFull img {
+  width: auto;
+  height: min(80vh, 45vw);
+  border-radius: 0.25rem;
+}
+.articleGalleryFull + .articleMain {
+  margin-top: var(--spacer-y-x4);
 }
 .articleImage img {
   width: 100%;
@@ -2845,12 +2954,19 @@ h6 + .richtext {
   background: rgba(224, 218, 213, 0.4);
 }
 
+h1 + .tagList,
 h1 + .articleDetails,
+h2 + .tagList,
 h2 + .articleDetails,
+h3 + .tagList,
 h3 + .articleDetails,
+h4 + .tagList,
 h4 + .articleDetails,
+h5 + .tagList,
 h5 + .articleDetails,
+h6 + .tagList,
 h6 + .articleDetails,
+.richtext + .tagList,
 .richtext + .articleDetails {
   margin-top: calc(var(--spacer-y) * 1.5);
 }
@@ -3082,4 +3198,60 @@ h6 + .articleDetails,
   z-index: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.accommodationListings {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacer-y-x4) var(--gutter-x);
+}
+@media only screen and (min-width: 960px) {
+  .accommodationListings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.accommodationListingsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gutter-x);
+  text-align: center;
+}
+.accommodationListingsItem .image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 120%;
+  border-radius: 0.25rem;
+  background: var(--color-offwhite);
+}
+.accommodationListingsItem .image img {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.6s ease;
+}
+.accommodationListingsItem .title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.accommodationListingsItem .tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.accommodationListingsItem > .btn {
+  margin-top: calc(var(--gutter-x) * 0.5);
+}
+.accommodationListingsItem:hover .image img {
+  transform: scale(1.1);
 }

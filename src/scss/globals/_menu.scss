@@ -11,6 +11,7 @@
         position: absolute;
         z-index: 20;
         left: var(--spacer-y);
+        top: var(--spacer-y);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,31 +44,37 @@
     &Nav {
         flex: 1;
         justify-content: center;
+        gap: calc(var(--font-size-xl) * 0.5);
         font-size: var(--font-size-xl);
-        visibility: hidden;
 
-        a {
-            visibility: visible;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden;
 
-            &:not(.btn) {
-                padding: 0.25em 0;
-                line-height: 1;
-                color: var(--color-white);
-                transition: color 0.6s ease;
-            }
+            li {
 
-            &.btn {
-                margin-top: calc(var(--font-size-xl) * 0.5);
-            }
-        }
-
-        &:hover {
-
-            a:not(.btn) {
-                color: var(--color-green-light);
-
-                &:hover {
+                a {
+                    visibility: visible;
+                    padding: 0.25em 0;
+                    line-height: 1;
                     color: var(--color-white);
+                    transition: color 0.6s ease;
+                }
+            }
+
+            &:hover {
+    
+                li {
+    
+                    a {
+                        color: var(--color-green-light);
+        
+                        &:hover {
+                            color: var(--color-white);
+                        }
+                    }
                 }
             }
         }

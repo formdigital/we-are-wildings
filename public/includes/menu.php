@@ -1,14 +1,16 @@
 <div class="siteMenu bg-green text-center">
-    <button class="siteMenuToggle siteMenuClose">
+    <button class="siteMenuToggle siteMenuClose siteMenu__fadeIn">
         <svg><use href="images/icons.svg#close"/></svg>
     </button>
     <div class="siteMenuMain">
         <nav class="siteMenuNav serif uppercase">
-            <div class="siteMenu__fadeIn"><a data-image="menuImageHome" href="./" class="active">Home</a></div>
-            <div class="siteMenu__fadeIn"><a data-image="menuImageAbout" href="about.php">About</a></div>
-            <div class="siteMenu__fadeIn"><a data-image="menuImageStay" href="stay.php">Stay with Us</a></div>
-            <div class="siteMenu__fadeIn"><a data-image="menuImageNews" href="news.php">News & Events</a></div>
-            <div class="siteMenu__fadeIn"><a data-image="menuImageContact" href="contact.php">Contacts Us</a></div>
+            <ul>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageHome" href="./" class="active">Home</a></li>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageAbout" href="about.php">About</a></li>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageStay" href="stay.php">Stay with Us</a></li>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageNews" href="news.php">News & Events</a></li>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageContact" href="contact.php">Contacts Us</a></li>
+            </ul>
             <div class="siteMenu__fadeIn"><a class="btn btnStroke" href="#">Book now</a></div>
         </nav>
         <div class="siteMenuContacts font-size-sm uppercase">

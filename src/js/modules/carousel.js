@@ -1,10 +1,12 @@
 import Swiper from 'swiper'
-import { EffectFade, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import { EffectFade, FreeMode, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 import mixitup from 'mixitup'
 
 export function Carousels() {
 
     const articleGalleries = document.querySelectorAll('.articleGallery')
+    const articleGalleriesFull = document.querySelectorAll('.articleGalleryFull')
+    const articleReviews = document.querySelectorAll('.articleReviews')
     const accommodationCarousels = document.querySelectorAll('.accommodationCarousel')
     const newsCarousels = document.querySelectorAll('.newsCarousel')
     const testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel')
@@ -29,6 +31,65 @@ export function Carousels() {
             pagination: {
                 el: pagination,
                 clickable: true,
+            },
+        })
+    })
+    
+    articleGalleriesFull.forEach(carousel => {
+        const prevBtn = carousel.querySelector('.prev')
+        const nextBtn = carousel.querySelector('.next')
+        const scrollbar = carousel.querySelector('.scrollbar')
+        const articleGalleryFullSwiper = new Swiper(carousel, {
+            modules: [FreeMode,Navigation,Scrollbar],
+            slidesPerView: 'auto',
+            spaceBetween: 12,
+            freeMode: true,
+            navigation: {
+                prevEl: prevBtn,
+                nextEl: nextBtn,
+            },
+            scrollbar: {
+                el: scrollbar,
+                draggable: true,
+            },
+            breakpoints: {
+                600: {
+                    spaceBetween: 15,
+                },
+                800: {
+                    spaceBetween: 18,
+                },
+                1000: {
+                    spaceBetween: 21,
+                },
+                1200: {
+                    spaceBetween: 24,
+                },
+            },
+        })
+    })
+    
+    articleReviews.forEach(container => {
+        const carousel = container.querySelector('.articleReviewsCarousel')
+        const prevBtn = container.querySelector('.prev')
+        const nextBtn = container.querySelector('.next')
+        const pagination = container.querySelector('.articleReviewsPagination')
+        const articleReviewsSwiper = new Swiper(carousel, {
+            modules: [EffectFade,Navigation,Pagination],
+            slidesPerView: 1,
+            autoHeight: true,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            navigation: {
+                prevEl: prevBtn,
+                nextEl: nextBtn,
+            },
+            pagination: {
+                el: pagination,
+                type: 'fraction',
             },
         })
     })

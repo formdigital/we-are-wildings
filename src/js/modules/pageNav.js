@@ -31,4 +31,19 @@ export function PageNavs() {
             },
         })
     })
+
+    if (document.querySelector('.heroFull + .pageNavContainer')) {
+
+        const hero = document.querySelector('.heroFull')
+        const nav = document.querySelector('.heroFull + .pageNavContainer > .pageNavSticky')
+        let heroHeight
+
+        function showHeroPageNav() {
+            heroHeight = `${window.innerHeight - nav.offsetHeight}px`
+            hero.style.minHeight = heroHeight
+        }
+
+        showHeroPageNav()
+        window.addEventListener('resize', showHeroPageNav)
+    }
 }

@@ -1,5 +1,6 @@
 .carouselFooter {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: var(--spacer-x);
     margin-top: var(--spacer-y);
