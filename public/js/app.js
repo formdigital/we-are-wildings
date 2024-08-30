@@ -100,9 +100,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Carousels() {
+  var articleGalleries = document.querySelectorAll('.articleGallery');
   var accommodationCarousels = document.querySelectorAll('.accommodationCarousel');
   var newsCarousels = document.querySelectorAll('.newsCarousel');
   var testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel');
+  articleGalleries.forEach(function (carousel) {
+    var prevBtn = carousel.querySelector('.prev');
+    var nextBtn = carousel.querySelector('.next');
+    var pagination = carousel.querySelector('.articleGalleryPagination');
+    var articleGallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](carousel, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.EffectFade, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      slidesPerView: 1,
+      autoHeight: true,
+      loop: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        prevEl: prevBtn,
+        nextEl: nextBtn
+      },
+      pagination: {
+        el: pagination,
+        clickable: true
+      }
+    });
+  });
   accommodationCarousels.forEach(function (carousel) {
     var prevBtn = carousel.querySelector('.prev');
     var nextBtn = carousel.querySelector('.next');
@@ -435,6 +459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _filter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./filter */ "./src/js/modules/filter.js");
 /* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu */ "./src/js/modules/menu.js");
 /* harmony import */ var _pageNav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pageNav */ "./src/js/modules/pageNav.js");
+/* harmony import */ var _video__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./video */ "./src/js/modules/video.js");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -448,6 +473,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -476,6 +502,7 @@ function enterScripts() {
   (0,_filter__WEBPACK_IMPORTED_MODULE_4__.Filters)();
   (0,_menu__WEBPACK_IMPORTED_MODULE_5__.Menu)();
   (0,_pageNav__WEBPACK_IMPORTED_MODULE_6__.PageNavs)();
+  (0,_video__WEBPACK_IMPORTED_MODULE_7__.Videos)();
 }
 
 // Scripts to load on every page exit
@@ -577,6 +604,40 @@ var DefaultTransition = /*#__PURE__*/function (_Transition) {
   return DefaultTransition;
 }(_unseenco_taxi__WEBPACK_IMPORTED_MODULE_0__.Transition);
 
+
+/***/ }),
+
+/***/ "./src/js/modules/video.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/video.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Videos: () => (/* binding */ Videos)
+/* harmony export */ });
+function Videos() {
+  // Custom Vimeo/Youtube play buttons
+  var articleVideos = document.querySelectorAll('.articleVideo');
+  articleVideos.forEach(function (articleVideo) {
+    var cover = articleVideo.querySelector(".cover");
+    if (articleVideo.querySelector("iframe")) {
+      var iframe = articleVideo.querySelector("iframe");
+      var iframeUrl = iframe.src;
+      cover.addEventListener('click', function () {
+        iframe.src = iframeUrl + '?autoplay=1';
+        cover.classList.add('hidden');
+      });
+    } else if (articleVideo.querySelector("video")) {
+      var video = articleVideo.querySelector("video");
+      cover.addEventListener('click', function () {
+        video.play();
+        cover.classList.add('hidden');
+      });
+    }
+  });
+}
 
 /***/ }),
 

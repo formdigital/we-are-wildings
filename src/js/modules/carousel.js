@@ -4,9 +4,34 @@ import mixitup from 'mixitup'
 
 export function Carousels() {
 
+    const articleGalleries = document.querySelectorAll('.articleGallery')
     const accommodationCarousels = document.querySelectorAll('.accommodationCarousel')
     const newsCarousels = document.querySelectorAll('.newsCarousel')
     const testimonialsCarousels = document.querySelectorAll('.testimonialsCarousel')
+    
+    articleGalleries.forEach(carousel => {
+        const prevBtn = carousel.querySelector('.prev')
+        const nextBtn = carousel.querySelector('.next')
+        const pagination = carousel.querySelector('.articleGalleryPagination')
+        const articleGallerySwiper = new Swiper(carousel, {
+            modules: [EffectFade,Navigation,Pagination],
+            slidesPerView: 1,
+            autoHeight: true,
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            navigation: {
+                prevEl: prevBtn,
+                nextEl: nextBtn,
+            },
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+        })
+    })
     
     accommodationCarousels.forEach(carousel => {
         const prevBtn = carousel.querySelector('.prev')

@@ -47,7 +47,7 @@
 .justify-between { justify-content: space-between; }
 
 // Text block width
-[class*="text-block-"] { width: 100%; }
+[class*="text-block-"] { width: 100%; &.text-center { margin-left: auto; margin-right: auto; } }
 .text-block-9 { max-width: 9em; }
 .text-block-10 { max-width: 10em; }
 .text-block-20 { max-width: 20em; }

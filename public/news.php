@@ -4,7 +4,7 @@
     <div class="px-1 pt-6 pb-4">
         <h1 class="serif font-size-3xl uppercase text-center">News & Events</h1>
     </div>
-    <div class="pageNavCarousel pageNavSticky px-1 py-1">
+    <div class="pageNavCarousel px-1 py-1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <button class="btn btnSecondary btnSm" type="button" data-filter="all">All</button>

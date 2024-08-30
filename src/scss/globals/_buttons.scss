@@ -38,6 +38,22 @@
     }
 }
 
+.playBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--spacer-y) * 3);
+    height: calc(var(--spacer-y) * 3);
+    color: var(--color-white);
+    border-radius: 50%;
+    background: var(--color-green);
+
+    svg {
+        width: calc(var(--gutter-x) * 1.5);
+        height: calc(var(--gutter-x) * 1.5);
+    }
+}
+
 .bg-green {
 
     .btn {

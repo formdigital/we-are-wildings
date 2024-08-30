@@ -6,6 +6,7 @@ import { Carousels } from './carousel'
 import { Filters } from './filter'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
+import { Videos } from './video'
 
 // Scripts to load on initial page entry
 function initialScripts() {
@@ -23,6 +24,7 @@ function enterScripts() {
     Filters()
     Menu()
     PageNavs()
+    Videos()
 }
 
 // Scripts to load on every page exit

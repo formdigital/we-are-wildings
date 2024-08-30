@@ -1055,6 +1055,10 @@ html.lenis, html.lenis body {
 [class*=text-block-] {
   width: 100%;
 }
+[class*=text-block-].text-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .text-block-9 {
   max-width: 9em;
@@ -1428,6 +1432,21 @@ h6 + .accordionContainer {
 }
 .btnSm {
   --btn-height: 1.75rem;
+}
+
+.playBtn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--spacer-y) * 3);
+  height: calc(var(--spacer-y) * 3);
+  color: var(--color-white);
+  border-radius: 50%;
+  background: var(--color-green);
+}
+.playBtn svg {
+  width: calc(var(--gutter-x) * 1.5);
+  height: calc(var(--gutter-x) * 1.5);
 }
 
 .bg-green .btn {
@@ -2622,6 +2641,218 @@ h6 + .richtext {
 .subheading + h5,
 .subheading + h6 {
   margin-top: 2rem;
+}
+
+.articleDetails {
+  display: flex;
+  gap: 1em;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.articleDetails .category {
+  font-weight: 500;
+}
+.articleDetails.text-center {
+  justify-content: center;
+}
+.articleHeroImage {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border-radius: 0.25rem;
+}
+.articleHeroImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.articleHeroImage + .articleMain {
+  margin-top: var(--spacer-y-x4);
+}
+.articleHero + .articleHeroImage {
+  margin-top: var(--spacer-y-x4);
+}
+.articleBody + .articleBody,
+.articleBody + .articleQuote, .articleQuote + .articleBody,
+.articleQuote + .articleQuote {
+  margin-top: var(--spacer-y-x2);
+}
+.articleBody + .articleGallery,
+.articleBody + .articleImage,
+.articleBody + .articleVideo,
+.articleBody + .articleLinks, .articleQuote + .articleGallery,
+.articleQuote + .articleImage,
+.articleQuote + .articleVideo,
+.articleQuote + .articleLinks {
+  margin-top: var(--spacer-y-x3);
+}
+.articleQuote {
+  padding-left: var(--gutter-x);
+  border-left: 1px solid currentColor;
+}
+.articleQuote .quote {
+  font-size: var(--font-size-md);
+  line-height: 1.4;
+}
+.articleQuote .quote + .ref {
+  margin-top: 1.2rem;
+}
+.articleQuote .ref {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.articleGallery, .articleImage, .articleVideo, .articleLinks {
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+.articleGallery + .articleBody,
+.articleGallery + .articleQuote, .articleImage + .articleBody,
+.articleImage + .articleQuote, .articleVideo + .articleBody,
+.articleVideo + .articleQuote, .articleLinks + .articleBody,
+.articleLinks + .articleQuote {
+  margin-top: var(--spacer-y-x3);
+}
+.articleGallery + .articleGallery,
+.articleGallery + .articleImage,
+.articleGallery + .articleVideo,
+.articleGallery + .articleLinks, .articleImage + .articleGallery,
+.articleImage + .articleImage,
+.articleImage + .articleVideo,
+.articleImage + .articleLinks, .articleVideo + .articleGallery,
+.articleVideo + .articleImage,
+.articleVideo + .articleVideo,
+.articleVideo + .articleLinks, .articleLinks + .articleGallery,
+.articleLinks + .articleImage,
+.articleLinks + .articleVideo,
+.articleLinks + .articleLinks {
+  margin-top: var(--spacer-y-x2);
+}
+.articleGallery {
+  position: relative;
+}
+.articleGallery .prev,
+.articleGallery .next {
+  position: absolute;
+  z-index: 20;
+  top: calc((100% - (var(--gutter-x) + 6px)) * 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(32px, 0.8vi + 28.8px, 48px);
+  height: clamp(32px, 0.8vi + 28.8px, 48px);
+  color: var(--color-white);
+  border-radius: 50%;
+  background: var(--color-green);
+  transform: translateY(-50%);
+}
+.articleGallery .prev svg,
+.articleGallery .next svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.articleGallery .prev {
+  left: calc(var(--spacer-x) * 0.25);
+}
+.articleGallery .next {
+  right: calc(var(--spacer-x) * 0.25);
+}
+.articleGalleryPagination {
+  position: relative;
+  top: auto !important;
+  bottom: auto !important;
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--gutter-x) * 0.5);
+  padding-top: var(--gutter-x);
+}
+.articleGalleryPagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--color-green);
+}
+.articleGallery img {
+  border-radius: 0.25rem;
+}
+.articleImage img {
+  width: 100%;
+}
+.articleVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  background: var(--color-offwhite);
+}
+.articleVideo iframe,
+.articleVideo video,
+.articleVideo .cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.articleVideo iframe,
+.articleVideo video {
+  z-index: 1;
+}
+.articleVideo .cover {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.articleVideo .cover img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.articleVideo .cover .playBtn {
+  z-index: 2;
+}
+.articleVideo .cover.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.articleLinks {
+  border: 1px solid rgba(25, 27, 25, 0.2);
+}
+.articleLinksItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gutter-x);
+  padding: 1em var(--gutter-x);
+  background: transparent;
+  transition: background-color 0.4s ease;
+}
+.articleLinksItem:not(:last-child) {
+  border-bottom: 1px solid rgba(25, 27, 25, 0.1);
+}
+.articleLinksItem .label {
+  font-weight: 500;
+}
+.articleLinksItem .icon svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+.articleLinksItem:hover {
+  background: rgba(224, 218, 213, 0.4);
+}
+
+h1 + .articleDetails,
+h2 + .articleDetails,
+h3 + .articleDetails,
+h4 + .articleDetails,
+h5 + .articleDetails,
+h6 + .articleDetails,
+.richtext + .articleDetails {
+  margin-top: calc(var(--spacer-y) * 1.5);
 }
 
 .contactDetailsHeading {
