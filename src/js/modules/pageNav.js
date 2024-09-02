@@ -5,6 +5,7 @@ export function PageNavs() {
     
     const pageNavLinks = document.querySelectorAll('.pageNavLink')
     const pageNavCarousels = document.querySelectorAll('.pageNavCarousel')
+    const pageNavDropdown = document.querySelector('.pageNavDropdown')
 
     pageNavLinks.forEach(link => {
         const target = document.querySelector(`${link.dataset.target}`)
@@ -45,5 +46,28 @@ export function PageNavs() {
 
         showHeroPageNav()
         window.addEventListener('resize', showHeroPageNav)
+    }
+
+    if (pageNavDropdown) {
+
+        const toggle = pageNavDropdown.querySelector('.toggle')
+        let isActive
+
+        function showDropdown() {
+            pageNavDropdown.classList.add('is-open')
+        }
+
+        function hideDropdown() {
+            pageNavDropdown.classList.remove('is-open')
+        }
+
+        toggle.addEventListener('click', () => {
+            isActive = !isActive
+            if (isActive) {
+                showDropdown()
+            } else {
+                hideDropdown()
+            }
+        })
     }
 }

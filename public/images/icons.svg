@@ -42,5 +42,11 @@
         <symbol id="play" viewBox="0 0 24 24">
             <path d="M8 19V5l11 7-11 7Z" fill="currentColor"/>
         </symbol>
+        <symbol id="plus" viewBox="0 0 24 24">
+            <path d="M11.25 12.75H5.5v-1.5h5.75V5.5h1.5v5.75h5.75v1.5h-5.75v5.75h-1.5v-5.75Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="dropdown-arrow" viewBox="0 0 24 24">
+            <path d="M12 15.054 6.346 9.4 7.4 8.346l4.6 4.6 4.6-4.6L17.654 9.4 12 15.054Z" fill="currentColor"/>
+        </symbol>
     </defs>
 </svg>

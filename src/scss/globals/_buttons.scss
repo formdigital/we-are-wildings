@@ -3,6 +3,7 @@
     --btn-color: var(--color-white);
     --btn-background: var(--color-green);
 
+    flex-shrink: 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,10 +31,21 @@
         --btn-color: var(--color-green);
         --btn-background: var(--color-offwhite);
 
+        &:not(.btnStatic):hover {
+            color: var(--btn-color);
+            border: 1px solid var(--btn-color);
+            background: transparent;
+        }
+
         &.mixitup-control-active {
             border: 1px solid currentColor;
             background: transparent;
         }
+    }
+
+    &Bare {
+        --btn-color: var(--color-green);
+        --btn-background: transparent;
     }
 
     &Stroke {

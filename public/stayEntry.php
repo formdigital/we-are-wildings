@@ -18,26 +18,47 @@
 
 <div class="pageNavContainer">
 
-    <div class="pageNavCarousel pageNavSticky px-1 py-1">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#booking">Bookings</button>
+    <div class="pageNavSticky has-book-btn">
+
+        <div class="pageNavDropdown">
+            <div class="dropdown">
+                <button class="btn btnSecondary pageNavLink" data-target="#booking">Description</button>
+                <button class="btn btnSecondary pageNavLink" data-target="#booking">Amenities</button>
+                <button class="btn btnSecondary pageNavLink" data-target="#booking">Gallery</button>
+                <button class="btn btnSecondary pageNavLink" data-target="#booking">Pets</button>
             </div>
-            <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#yourStay">Your Stay</button>
-            </div>
-            <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#activities">Activities</button>
-            </div>
-            <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#somethingElse1">Something Else</button>
-            </div>
-            <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#somethingElse2">Something Else</button>
-            </div>
+            <button class="toggle">
+                <span class="label">Jump to section</span>
+                <svg><use href="images/icons.svg#plus"/></svg>
+            </button>
         </div>
-        <button class="prev"><svg><use href="images/icons.svg#circle-arrow-left"/></svg></button>
-        <button class="next"><svg><use href="images/icons.svg#circle-arrow-right"/></svg></button>
+
+        <div class="pageNavCarousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <button class="btn btnBare pageNavLink" data-target="#booking">Bookings</button>
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn btnBare pageNavLink" data-target="#yourStay">Your Stay</button>
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn btnBare pageNavLink" data-target="#activities">Activities</button>
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn btnBare pageNavLink" data-target="#somethingElse1">Something Else</button>
+                </div>
+                <div class="swiper-slide">
+                    <button class="btn btnBare pageNavLink" data-target="#somethingElse2">Something Else</button>
+                </div>
+            </div>
+            <button class="prev"><svg><use href="images/icons.svg#circle-arrow-left"/></svg></button>
+            <button class="next"><svg><use href="images/icons.svg#circle-arrow-right"/></svg></button>
+        </div>
+
+        <div class="book-btn">
+            <a class="btn" href="#">Book now</a>
+        </div>
+
     </div>
 
     <div class="px-1 py-6 overflow-hidden">

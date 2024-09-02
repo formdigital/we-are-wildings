@@ -473,6 +473,7 @@ __webpack_require__.r(__webpack_exports__);
 function PageNavs() {
   var pageNavLinks = document.querySelectorAll('.pageNavLink');
   var pageNavCarousels = document.querySelectorAll('.pageNavCarousel');
+  var pageNavDropdown = document.querySelector('.pageNavDropdown');
   pageNavLinks.forEach(function (link) {
     var target = document.querySelector("".concat(link.dataset.target));
     link.addEventListener('click', function () {
@@ -507,6 +508,24 @@ function PageNavs() {
     var heroHeight;
     showHeroPageNav();
     window.addEventListener('resize', showHeroPageNav);
+  }
+  if (pageNavDropdown) {
+    var showDropdown = function showDropdown() {
+      pageNavDropdown.classList.add('is-open');
+    };
+    var hideDropdown = function hideDropdown() {
+      pageNavDropdown.classList.remove('is-open');
+    };
+    var toggle = pageNavDropdown.querySelector('.toggle');
+    var isActive;
+    toggle.addEventListener('click', function () {
+      isActive = !isActive;
+      if (isActive) {
+        showDropdown();
+      } else {
+        hideDropdown();
+      }
+    });
   }
 }
 

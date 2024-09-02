@@ -1399,6 +1399,7 @@ h6 + .accordionContainer {
   --btn-height: 2.5rem;
   --btn-color: var(--color-white);
   --btn-background: var(--color-green);
+  flex-shrink: 0;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1425,9 +1426,18 @@ h6 + .accordionContainer {
   --btn-color: var(--color-green);
   --btn-background: var(--color-offwhite);
 }
+.btnSecondary:not(.btnStatic):hover {
+  color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  background: transparent;
+}
 .btnSecondary.mixitup-control-active {
   border: 1px solid currentColor;
   background: transparent;
+}
+.btnBare {
+  --btn-color: var(--color-green);
+  --btn-background: transparent;
 }
 .btnStroke {
   color: var(--btn-background);
@@ -2260,7 +2270,7 @@ h6 + .btn,
 .pageNavCarousel {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(25, 27, 25, 0.1);
+  box-shadow: 0px 1px 0px 0px rgba(25, 27, 25, 0.1);
 }
 .pageNavCarousel .swiper-slide {
   width: auto;
@@ -2308,12 +2318,100 @@ h6 + .btn,
   justify-content: flex-end;
   background: linear-gradient(90deg, rgba(240, 237, 234, 0) 0%, rgb(240, 237, 234) 100%);
 }
-
+.pageNavDropdown .toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacer-x);
+  font-size: 1rem;
+  color: var(--color-green);
+}
+.pageNavDropdown .toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: rotate(0deg);
+  transition: transform 0.4s ease;
+}
+.pageNavDropdown .dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: var(--spacer-x);
+  box-shadow: 0px 1px 0px 0px rgba(25, 27, 25, 0.1);
+}
+.pageNavDropdown .dropdown button {
+  display: block;
+  width: 100%;
+  color: var(--color-green);
+}
+.pageNavDropdown.is-open .toggle svg {
+  transform: rotate(135deg);
+}
+.pageNavDropdown.is-open .dropdown {
+  display: flex;
+}
 .pageNavSticky {
   position: sticky;
   z-index: 100;
   top: 0;
   background: var(--color-white);
+}
+.pageNavSticky.has-book-btn {
+  position: fixed;
+  z-index: 500;
+  top: auto;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px -1px 0px 0px rgba(25, 27, 25, 0.1);
+}
+@media only screen and (min-width: 720px) {
+  .pageNavSticky.has-book-btn {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacer-x);
+    padding: calc(var(--spacer-y) * 0.75) var(--spacer-x);
+    box-shadow: 0px 1px 0px 0px rgba(25, 27, 25, 0.1);
+  }
+}
+@media only screen and (min-width: 720px) {
+  .pageNavSticky.has-book-btn .pageNavDropdown {
+    display: none;
+  }
+}
+.pageNavSticky.has-book-btn .pageNavCarousel {
+  display: none;
+  box-shadow: none;
+}
+@media only screen and (min-width: 720px) {
+  .pageNavSticky.has-book-btn .pageNavCarousel {
+    display: block;
+  }
+}
+.pageNavSticky.has-book-btn .book-btn {
+  flex-shrink: 0;
+  padding: calc(var(--spacer-y) * 0.75) var(--spacer-x);
+  border-top: 1px solid rgba(25, 27, 25, 0.1);
+}
+@media only screen and (min-width: 720px) {
+  .pageNavSticky.has-book-btn .book-btn {
+    padding: 0;
+    border-top: none;
+  }
+}
+.pageNavSticky.has-book-btn .book-btn .btn {
+  width: 100%;
+}
+@media only screen and (min-width: 720px) {
+  .pageNavSticky.has-book-btn .book-btn .btn {
+    width: auto;
+  }
 }
 
 .instaFeedHeader {
