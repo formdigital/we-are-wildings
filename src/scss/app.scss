@@ -23,14 +23,23 @@
     --font-serif: 'ALTMariaClara-Light', serif;
 
     // Font size
+    // --font-size-sm: clamp(13.33px, 0.01vi + 13.3px, 13.5px);
+    // --font-size-base: clamp(16px, 0.1vi + 15.6px, 18px);
+    // --font-size-md: clamp(19.2px, 0.24vi + 18.24px, 23.99px);
+    // --font-size-lg: clamp(23.04px, 0.45vi + 21.25px, 31.98px);
+    // --font-size-xl: clamp(27.65px, 0.75vi + 24.65px, 42.63px);
+    // --font-size-2xl: clamp(33.18px, 1.18vi + 28.45px, 56.83px);
+    // --font-size-3xl: clamp(39.81px, 1.8vi + 32.62px, 75.76px);
+    // --font-size-4xl: clamp(47.78px, 2.66vi + 37.13px, 100.98px);
+    
     --font-size-sm: clamp(13.33px, 0.01vi + 13.3px, 13.5px);
     --font-size-base: clamp(16px, 0.1vi + 15.6px, 18px);
-    --font-size-md: clamp(19.2px, 0.24vi + 18.24px, 23.99px);
-    --font-size-lg: clamp(23.04px, 0.45vi + 21.25px, 31.98px);
-    --font-size-xl: clamp(27.65px, 0.75vi + 24.65px, 42.63px);
-    --font-size-2xl: clamp(33.18px, 1.18vi + 28.45px, 56.83px);
-    --font-size-3xl: clamp(39.81px, 1.8vi + 32.62px, 75.76px);
-    --font-size-4xl: clamp(47.78px, 2.66vi + 37.13px, 100.98px);
+    --font-size-md: clamp(19.2px, 0.3vi + 18px, 25.2px);
+    --font-size-lg: clamp(23.04px, 0.61vi + 20.59px, 35.28px);
+    --font-size-xl: clamp(27.65px, 1.09vi + 23.3px, 49.39px);
+    --font-size-2xl: clamp(33.18px, 1.8vi + 25.98px, 69.15px);
+    --font-size-3xl: clamp(39.81px, 2.85vi + 28.41px, 96.81px);
+    --font-size-4xl: clamp(47.78px, 4.39vi + 30.22px, 135.53px);
 
     // Colour
     --color-white: #f0edea;

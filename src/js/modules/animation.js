@@ -5,6 +5,39 @@ export function Animations() {
 
     gsap.registerPlugin(ScrollTrigger)
 
+    // Hero background parallax
+    if (document.querySelector('.heroBg')) {
+
+        gsap.to('.heroBg', {
+            yPercent: 20,
+            opacity: 0.2,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.heroBg',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true,
+            },
+        })
+    }
+
+    // Parallax images
+    const parallaxContainers = document.querySelectorAll('.parallaxContainer')
+    parallaxContainers.forEach(container => {
+        const media = container.querySelector('img')
+
+        gsap.to(media, {
+            yPercent: 10,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: container,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+            },
+        })
+    })
+
     // Footer logo animation
     gsap.from('.siteFooterLogo .type', {
         rotate: -135,

@@ -8,7 +8,7 @@
         <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
     </div>
     <div class="heroBg">
-        <img src="https://placehold.co/1600x900">
+        <img src="https://images.unsplash.com/photo-1595079917801-4a04e2985fba?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     </div>
 </div>
 
@@ -37,11 +37,11 @@
                         </div>
                         <div class="title">Merlin Barn</div>
                         <div class="tags">
-                            <div class="btn btnSecondary btnSm">Sleeps 6</div>
-                            <div class="btn btnSecondary btnSm">3 Bedrooms</div>
-                            <div class="btn btnSecondary btnSm">4 Beds</div>
-                            <div class="btn btnSecondary btnSm">2 Bathrooms</div>
-                            <div class="btn btnSecondary btnSm">Private outdoor wood-fired hot tub</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Sleeps 6</div>
+                            <div class="btn btnSecondary btnSm btnStatic">3 Bedrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">4 Beds</div>
+                            <div class="btn btnSecondary btnSm btnStatic">2 Bathrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Private outdoor wood-fired hot tub</div>
                         </div>
                         <div class="btn">More details</div>
                     </a>
@@ -51,11 +51,11 @@
                         </div>
                         <div class="title">Eagle Barn</div>
                         <div class="tags">
-                            <div class="btn btnSecondary btnSm">Sleeps 6</div>
-                            <div class="btn btnSecondary btnSm">3 Bedrooms</div>
-                            <div class="btn btnSecondary btnSm">4 Beds</div>
-                            <div class="btn btnSecondary btnSm">2 Bathrooms</div>
-                            <div class="btn btnSecondary btnSm">Private outdoor wood-fired hot tub</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Sleeps 6</div>
+                            <div class="btn btnSecondary btnSm btnStatic">3 Bedrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">4 Beds</div>
+                            <div class="btn btnSecondary btnSm btnStatic">2 Bathrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Private outdoor wood-fired hot tub</div>
                         </div>
                         <div class="btn">More details</div>
                     </a>
@@ -65,11 +65,11 @@
                         </div>
                         <div class="title">Shepherds Hut</div>
                         <div class="tags">
-                            <div class="btn btnSecondary btnSm">Sleeps 6</div>
-                            <div class="btn btnSecondary btnSm">3 Bedrooms</div>
-                            <div class="btn btnSecondary btnSm">4 Beds</div>
-                            <div class="btn btnSecondary btnSm">2 Bathrooms</div>
-                            <div class="btn btnSecondary btnSm">Private outdoor wood-fired hot tub</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Sleeps 6</div>
+                            <div class="btn btnSecondary btnSm btnStatic">3 Bedrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">4 Beds</div>
+                            <div class="btn btnSecondary btnSm btnStatic">2 Bathrooms</div>
+                            <div class="btn btnSecondary btnSm btnStatic">Private outdoor wood-fired hot tub</div>
                         </div>
                         <div class="btn">More details</div>
                     </a>
@@ -148,8 +148,8 @@
             </div>
         </div>
     </div>
-    <div class="splitMedia">
-        <img src="https://placehold.co/1000x1200">
+    <div class="splitMedia parallaxContainer">
+        <img src="https://images.unsplash.com/photo-1593948379487-8c48a8470db6?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     </div>
 </div>
 

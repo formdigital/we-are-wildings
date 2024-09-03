@@ -67,6 +67,37 @@ __webpack_require__.r(__webpack_exports__);
 function Animations() {
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
 
+  // Hero background parallax
+  if (document.querySelector('.heroBg')) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.heroBg', {
+      yPercent: 20,
+      opacity: 0.2,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.heroBg',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  }
+
+  // Parallax images
+  var parallaxContainers = document.querySelectorAll('.parallaxContainer');
+  parallaxContainers.forEach(function (container) {
+    var media = container.querySelector('img');
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(media, {
+      yPercent: 10,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: container,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  });
+
   // Footer logo animation
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].from('.siteFooterLogo .type', {
     rotate: -135,
@@ -845,6 +876,15 @@ function Videos() {
         video.play();
         cover.classList.add('hidden');
       });
+    }
+  });
+
+  // Autoplay videos on page enter
+  var vids = document.querySelectorAll("video");
+  vids.forEach(function (vid) {
+    var playPromise = vid.play();
+    if (playPromise !== undefined) {
+      playPromise.then(function (_) {})["catch"](function (error) {});
     }
   });
 }

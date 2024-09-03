@@ -756,12 +756,12 @@ button.swiper-pagination-bullet {
   --font-serif: "ALTMariaClara-Light", serif;
   --font-size-sm: clamp(13.33px, 0.01vi + 13.3px, 13.5px);
   --font-size-base: clamp(16px, 0.1vi + 15.6px, 18px);
-  --font-size-md: clamp(19.2px, 0.24vi + 18.24px, 23.99px);
-  --font-size-lg: clamp(23.04px, 0.45vi + 21.25px, 31.98px);
-  --font-size-xl: clamp(27.65px, 0.75vi + 24.65px, 42.63px);
-  --font-size-2xl: clamp(33.18px, 1.18vi + 28.45px, 56.83px);
-  --font-size-3xl: clamp(39.81px, 1.8vi + 32.62px, 75.76px);
-  --font-size-4xl: clamp(47.78px, 2.66vi + 37.13px, 100.98px);
+  --font-size-md: clamp(19.2px, 0.3vi + 18px, 25.2px);
+  --font-size-lg: clamp(23.04px, 0.61vi + 20.59px, 35.28px);
+  --font-size-xl: clamp(27.65px, 1.09vi + 23.3px, 49.39px);
+  --font-size-2xl: clamp(33.18px, 1.8vi + 25.98px, 69.15px);
+  --font-size-3xl: clamp(39.81px, 2.85vi + 28.41px, 96.81px);
+  --font-size-4xl: clamp(47.78px, 4.39vi + 30.22px, 135.53px);
   --color-white: #f0edea;
   --color-green: #29382b;
   --color-green-light: #769177;
@@ -2221,6 +2221,7 @@ h6 + .btnGroup,
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding-top: var(--header-height);
   color: var(--color-white);
   background-color: var(--color-dark);
@@ -2295,7 +2296,8 @@ h6 + .btnGroup,
     padding-bottom: min(60%, 100vh);
   }
 }
-.splitMedia img {
+.splitMedia img,
+.splitMedia video {
   position: absolute;
   left: 0;
   top: 0;
@@ -2498,6 +2500,22 @@ h6 + .btnGroup,
   transform-origin: left;
 }
 
+.parallaxContainer {
+  position: relative;
+  overflow: hidden;
+}
+.parallaxContainer img,
+.parallaxContainer video {
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 111.11%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .siteMenu {
   position: fixed;
   z-index: 5000;
@@ -2539,8 +2557,8 @@ h6 + .btnGroup,
 .siteMenuNav {
   flex: 1;
   justify-content: center;
-  gap: calc(var(--font-size-xl) * 0.5);
-  font-size: var(--font-size-xl);
+  gap: 0.5em;
+  font-size: 2rem;
 }
 .siteMenuNav ul {
   display: flex;
@@ -2608,7 +2626,8 @@ h6 + .btnGroup,
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  will-change: opacity;
+  transition: opacity 0.6s;
 }
 .siteMenuImages .image img {
   width: 100%;
@@ -3348,9 +3367,13 @@ h6 + .articleDetails,
 .accommodationCard .title {
   font-size: var(--font-size-md);
 }
+.accommodationCard .image {
+  z-index: 0;
+}
 .accommodationCard .image::before {
   content: "";
   position: absolute;
+  z-index: 2;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -3359,8 +3382,16 @@ h6 + .articleDetails,
 }
 .accommodationCard .image img {
   z-index: 0;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1);
+  will-change: transform;
+  transition: transform 0.6s ease;
+}
+.accommodationCard:hover .image img {
+  transform: scale(1.1);
 }
 .accommodationListings {
   display: grid;

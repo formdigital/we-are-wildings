@@ -30,8 +30,8 @@
             </div>
         </div>
     </div>
-    <div class="splitMedia">
-        <img src="https://placehold.co/1000x1200">
+    <div class="splitMedia parallaxContainer">
+        <img src="https://images.unsplash.com/photo-1703291544385-2e616d4fda92?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
     </div>
 </div>
 
@@ -51,7 +51,7 @@
                         <div class="title">Tawny Barn</div>
                     </div>
                     <div class="image">
-                        <img src="https://placehold.co/1000x1200">
+                        <img src="https://images.unsplash.com/photo-1528190956502-da681113c8ed?q=80&w=4414&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
                     </div>
                 </a>
             </div>
@@ -105,7 +105,7 @@
 <div class="px-1 overflow-hidden">
     <div class="pt-5 pb-4 text-center">
         <h2 class="subheading uppercase font-size-sm fadeInReveal">The Latest</h2>
-        <h3 class="newsCarouselFilter serif font-size-3xl uppercase fadeInReveal">
+        <h3 class="newsCarouselFilter serif font-size-2xl uppercase fadeInReveal">
             <button type="button" data-filter=".mix-category-news">News</button>
             <span>&</span>
             <button type="button" data-filter=".mix-category-events">Events</button>
