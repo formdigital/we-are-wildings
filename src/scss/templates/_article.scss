@@ -334,6 +334,13 @@
     }
 }
 
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
 h1,
 h2,
 h3,

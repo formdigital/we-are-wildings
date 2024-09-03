@@ -9,12 +9,26 @@ export function PageNavs() {
 
     pageNavLinks.forEach(link => {
         const target = document.querySelector(`${link.dataset.target}`)
+        let dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
+
         link.addEventListener('click', () => {
-            let pageNavHeight = document.querySelector('.pageNavCarousel').offsetHeight
-            window.scrollTo({
-                top: window.scrollY + target.getBoundingClientRect().top - pageNavHeight - 16,
-                behavior: "smooth",
-            })
+            
+            if (pageNavDropdown && !dropdownBreakpoint.matches) {
+
+                window.scrollTo({
+                    top: window.scrollY + target.getBoundingClientRect().top,
+                    behavior: "smooth",
+                })
+
+            } else {
+
+                let pageNavHeight = document.querySelector('.pageNav').offsetHeight
+                window.scrollTo({
+                    top: window.scrollY + target.getBoundingClientRect().top - pageNavHeight - 16,
+                    behavior: "smooth",
+                })
+
+            }
         })
     })
     
@@ -51,6 +65,8 @@ export function PageNavs() {
     if (pageNavDropdown) {
 
         const toggle = pageNavDropdown.querySelector('.toggle')
+        const dropdownLinks = pageNavDropdown.querySelectorAll('.pageNavLink')
+        const bookBtn = document.querySelector('.pageNav .book-btn .pageNavLink')
         let isActive
 
         function showDropdown() {
@@ -61,12 +77,23 @@ export function PageNavs() {
             pageNavDropdown.classList.remove('is-open')
         }
 
-        toggle.addEventListener('click', () => {
+        function toggleDropdown() {
             isActive = !isActive
             if (isActive) {
                 showDropdown()
             } else {
                 hideDropdown()
+            }
+        }
+
+        toggle.addEventListener('click', toggleDropdown)
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', toggleDropdown)
+        })
+        bookBtn.addEventListener('click', () => {
+            if (isActive) {
+                hideDropdown()
+                isActive = !isActive
             }
         })
     }

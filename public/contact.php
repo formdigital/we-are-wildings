@@ -41,7 +41,7 @@
     <div class="px-1 pb-2 text-center">
         <h2 class="serif font-size-2xl uppercase">FAQ's</h2>
     </div>
-    <div class="pageNavCarousel pageNavSticky px-1 py-1">
+    <div class="pageNav pageNavCarousel pageNavSticky px-1 py-1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <button class="btn btnSecondary btnSm pageNavLink" data-target="#booking">Bookings</button>

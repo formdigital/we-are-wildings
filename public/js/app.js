@@ -476,12 +476,20 @@ function PageNavs() {
   var pageNavDropdown = document.querySelector('.pageNavDropdown');
   pageNavLinks.forEach(function (link) {
     var target = document.querySelector("".concat(link.dataset.target));
+    var dropdownBreakpoint = window.matchMedia("(min-width: 720px)");
     link.addEventListener('click', function () {
-      var pageNavHeight = document.querySelector('.pageNavCarousel').offsetHeight;
-      window.scrollTo({
-        top: window.scrollY + target.getBoundingClientRect().top - pageNavHeight - 16,
-        behavior: "smooth"
-      });
+      if (pageNavDropdown && !dropdownBreakpoint.matches) {
+        window.scrollTo({
+          top: window.scrollY + target.getBoundingClientRect().top,
+          behavior: "smooth"
+        });
+      } else {
+        var pageNavHeight = document.querySelector('.pageNav').offsetHeight;
+        window.scrollTo({
+          top: window.scrollY + target.getBoundingClientRect().top - pageNavHeight - 16,
+          behavior: "smooth"
+        });
+      }
     });
   });
   pageNavCarousels.forEach(function (carousel) {
@@ -516,14 +524,26 @@ function PageNavs() {
     var hideDropdown = function hideDropdown() {
       pageNavDropdown.classList.remove('is-open');
     };
-    var toggle = pageNavDropdown.querySelector('.toggle');
-    var isActive;
-    toggle.addEventListener('click', function () {
+    var toggleDropdown = function toggleDropdown() {
       isActive = !isActive;
       if (isActive) {
         showDropdown();
       } else {
         hideDropdown();
+      }
+    };
+    var toggle = pageNavDropdown.querySelector('.toggle');
+    var dropdownLinks = pageNavDropdown.querySelectorAll('.pageNavLink');
+    var bookBtn = document.querySelector('.pageNav .book-btn .pageNavLink');
+    var isActive;
+    toggle.addEventListener('click', toggleDropdown);
+    dropdownLinks.forEach(function (link) {
+      link.addEventListener('click', toggleDropdown);
+    });
+    bookBtn.addEventListener('click', function () {
+      if (isActive) {
+        hideDropdown();
+        isActive = !isActive;
       }
     });
   }

@@ -3052,6 +3052,13 @@ h6 + .richtext {
   background: rgba(224, 218, 213, 0.4);
 }
 
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
 h1 + .tagList,
 h1 + .articleDetails,
 h2 + .tagList,

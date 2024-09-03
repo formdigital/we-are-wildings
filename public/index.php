@@ -1,7 +1,7 @@
 <?php $invertHeader = "true"; include "includes/header.php"; ?>
 
 <div class="hero heroFull">
-    <div class="heroMain py-5">
+    <div class="heroMain px-1 py-5">
         <h1 class="subheading uppercase font-size-sm">Made in Lincolnshire</h1>
         <h2 class="serif uppercase font-size-4xl">Wild by Nature</h2>
     </div>
