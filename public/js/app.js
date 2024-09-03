@@ -471,12 +471,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function PageNavs() {
+  var pageNav = document.querySelector('.pageNav');
   var pageNavLinks = document.querySelectorAll('.pageNavLink');
   var pageNavCarousels = document.querySelectorAll('.pageNavCarousel');
   var pageNavDropdown = document.querySelector('.pageNavDropdown');
+  var dropdownBreakpoint = window.matchMedia("(min-width: 720px)");
   pageNavLinks.forEach(function (link) {
     var target = document.querySelector("".concat(link.dataset.target));
-    var dropdownBreakpoint = window.matchMedia("(min-width: 720px)");
     link.addEventListener('click', function () {
       if (pageNavDropdown && !dropdownBreakpoint.matches) {
         window.scrollTo({
@@ -546,6 +547,25 @@ function PageNavs() {
         isActive = !isActive;
       }
     });
+
+    // Hide dropdown when scrolled to the bottom of page
+    if (!dropdownBreakpoint.matches) {
+      window.addEventListener('scroll', function () {
+        var pageNavTop = pageNav.getBoundingClientRect().top;
+        var footerTop = document.querySelector('.siteFooter').getBoundingClientRect().top;
+        if (footerTop < pageNavTop) {
+          pageNav.classList.add('is-hidden');
+          if (isActive) {
+            setTimeout(function () {
+              hideDropdown();
+              isActive = !isActive;
+            }, 400);
+          }
+        } else if (pageNavTop < footerTop && pageNav.classList.contains('is-hidden')) {
+          pageNav.classList.remove('is-hidden');
+        }
+      });
+    }
   }
 }
 

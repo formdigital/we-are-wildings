@@ -39,25 +39,25 @@
         <div class="pageNavCarousel">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#description">Description</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#description">Description</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#amenities">Amenities</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#amenities">Amenities</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#gallery">Gallery</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#gallery">Gallery</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#pets">Pets</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#pets">Pets</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#floorPlan">Floor Plan</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#floorPlan">Floor Plan</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#location">Location</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#location">Location</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnBare pageNavLink" data-target="#reviews">Reviews</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="#reviews">Reviews</button>
                 </div>
             </div>
             <button class="prev"><svg><use href="images/icons.svg#circle-arrow-left"/></svg></button>

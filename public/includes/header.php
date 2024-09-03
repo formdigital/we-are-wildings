@@ -32,7 +32,10 @@
                     </a>
 
                     <div class="right">
-                        <a class="btn btnStroke">Book now</a>
+                        <a class="bookBtnMobile" href="#">
+                            <svg><use href="images/icons.svg#calendar"/></svg>
+                        </a>
+                        <a class="btn btnStroke bookBtnDesktop">Book now</a>
                     </div>
                     
                 </header>

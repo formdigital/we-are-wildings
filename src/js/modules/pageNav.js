@@ -3,13 +3,14 @@ import { Navigation } from 'swiper/modules'
 
 export function PageNavs() {
     
+    const pageNav = document.querySelector('.pageNav')
     const pageNavLinks = document.querySelectorAll('.pageNavLink')
     const pageNavCarousels = document.querySelectorAll('.pageNavCarousel')
     const pageNavDropdown = document.querySelector('.pageNavDropdown')
+    let dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
 
     pageNavLinks.forEach(link => {
         const target = document.querySelector(`${link.dataset.target}`)
-        let dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
 
         link.addEventListener('click', () => {
             
@@ -96,5 +97,30 @@ export function PageNavs() {
                 isActive = !isActive
             }
         })
+
+        // Hide dropdown when scrolled to the bottom of page
+        if (!dropdownBreakpoint.matches) {
+            window.addEventListener('scroll', () => {
+                let pageNavTop = pageNav.getBoundingClientRect().top
+                let footerTop = document.querySelector('.siteFooter').getBoundingClientRect().top
+                
+                if (footerTop < pageNavTop) {
+
+                    pageNav.classList.add('is-hidden')
+
+                    if (isActive) {
+                        setTimeout(() => { 
+                            hideDropdown()
+                            isActive = !isActive
+                        },400)
+                    }
+
+                } else if (pageNavTop < footerTop && pageNav.classList.contains('is-hidden')) {
+
+                    pageNav.classList.remove('is-hidden')
+
+                }
+            })
+        }
     }
 }

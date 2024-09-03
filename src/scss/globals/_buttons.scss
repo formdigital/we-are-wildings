@@ -21,7 +21,7 @@
     background: var(--btn-background);
     transition: color 0.4s ease, border 0.4s ease, background-color 0.4s ease;
 
-    &:not(.btnStatic):hover {
+    &:not(.btnStatic):not(.btnBare):hover {
         color: var(--btn-background);
         border: 1px solid var(--btn-background);
         background: transparent;
@@ -31,7 +31,7 @@
         --btn-color: var(--color-green);
         --btn-background: var(--color-offwhite);
 
-        &:not(.btnStatic):hover {
+        &:not(.btnStatic):not(.btnBare):hover {
             color: var(--btn-color);
             border: 1px solid var(--btn-color);
             background: transparent;
@@ -53,7 +53,7 @@
         border: 1px solid rgba(25,27,25,0.2);
         background: transparent;
 
-        &:not(.btnStatic):hover {
+        &:not(.btnStatic):not(.btnBare):hover {
             color: var(--btn-color);
             border: 1px solid var(--btn-background);
             background: var(--btn-background);
@@ -93,7 +93,7 @@
             border: 1px solid rgba(240,237,234,0.2);
             background: transparent;
 
-            &:not(.btnStatic):hover {
+            &:not(.btnStatic):not(.btnBare):hover {
                 color: var(--btn-color);
                 border: 1px solid var(--btn-background);
                 background: var(--btn-background);

@@ -164,9 +164,10 @@
 
         .details {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 1em;
+            gap: 0.5em 1em;
             margin-top: var(--font-size-md);
             font-size: var(--font-size-sm);
             text-transform: uppercase;
