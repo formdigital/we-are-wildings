@@ -2,8 +2,8 @@
 
 <div class="px-1 offsetHeader">
     <div class="py-6 text-center">
-        <h1 class="serif font-size-3xl uppercase">Get in touch</h1>
-        <div class="richtext text-block-35">
+        <h1 class="serif font-size-3xl uppercase fadeInReveal">Get in touch</h1>
+        <div class="richtext text-block-35 fadeInReveal">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tellus neque, vitae faucibus sapien lacinia et. Vivamus volutpat pretium urna sit amet convallis. Aliquam molestie, ipsum quis ullamcorper accumsan, sapien augue porta odio, eu tincidunt purus urna sit amet erat.</p>
         </div>
     </div>
@@ -11,23 +11,23 @@
 
 <div class="split bg-green">
     <div class="splitText px-1 py-4 justify-center">
-        <div class="contactDetailsHeading">Address</div>
-        <a class="contactDetailsLink" href="#" target="_blank">
+        <div class="contactDetailsHeading fadeInReveal">Address</div>
+        <a class="contactDetailsLink fadeInReveal" href="#" target="_blank">
             <span>Plot Farm</span>
             <span>Newark</span>
             <span>England</span>
             <span>NG23 7DN</span>
             <span>United Kingdom</span>
         </a>
-        <div class="contactDetailsHeading">Call</div>
-        <a class="contactDetailsLink" href="tel:+441446901877">
+        <div class="contactDetailsHeading fadeInReveal">Call</div>
+        <a class="contactDetailsLink fadeInReveal" href="tel:+441446901877">
             <span>+44 1446 901 877</span>
         </a>
-        <div class="contactDetailsHeading">Email</div>
-        <a class="contactDetailsLink" href="mailto:info@wearewildings.co.uk">
+        <div class="contactDetailsHeading fadeInReveal">Email</div>
+        <a class="contactDetailsLink fadeInReveal" href="mailto:info@wearewildings.co.uk">
             <span>info@wearewildings.co.uk</span>
         </a>
-        <div class="contactDetailsSocials">
+        <div class="contactDetailsSocials fadeInReveal">
             <a href="#" target="_blank"><svg><use href="images/icons.svg#instagram"/></svg></a>
             <a href="#" target="_blank"><svg><use href="images/icons.svg#facebook"/></svg></a>
         </div>
@@ -39,7 +39,7 @@
 
 <div class="py-6">
     <div class="px-1 pb-2 text-center">
-        <h2 class="serif font-size-2xl uppercase">FAQ's</h2>
+        <h2 class="serif font-size-2xl uppercase fadeInReveal">FAQ's</h2>
     </div>
     <div class="pageNav pageNavCarousel pageNavSticky px-1 py-1">
         <div class="swiper-wrapper">
@@ -67,9 +67,9 @@
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
 
-                    <h3 class="accordionGroupTitle" id="booking">Bookings</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal" id="booking">Bookings</h3>
 
-                    <div class="accordionContainer">
+                    <div class="accordionContainer fadeInReveal">
 
                         <div class="ac">
                             <h4 class="ac-header">
@@ -117,9 +117,9 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle" id="yourStay">Your Stay</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal" id="yourStay">Your Stay</h3>
 
-                    <div class="accordionContainer">
+                    <div class="accordionContainer fadeInReveal">
 
                         <div class="ac">
                             <h4 class="ac-header">
@@ -167,9 +167,9 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle" id="activities">Activities</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal" id="activities">Activities</h3>
 
-                    <div class="accordionContainer">
+                    <div class="accordionContainer fadeInReveal">
                         
                         <div class="ac">
                             <h4 class="ac-header">
@@ -195,9 +195,9 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle" id="somethingElse1">Something Else</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal" id="somethingElse1">Something Else</h3>
 
-                    <div class="accordionContainer">
+                    <div class="accordionContainer fadeInReveal">
                         
                         <div class="ac">
                             <h4 class="ac-header">
@@ -223,9 +223,9 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle" id="somethingElse2">Something Else</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal" id="somethingElse2">Something Else</h3>
 
-                    <div class="accordionContainer">
+                    <div class="accordionContainer fadeInReveal">
                         
                         <div class="ac">
                             <h4 class="ac-header">

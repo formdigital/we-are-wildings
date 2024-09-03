@@ -1519,12 +1519,19 @@ h6 + .accordionContainer {
 }
 
 h1 + .btn,
+h1 + .btnGroup,
 h2 + .btn,
+h2 + .btnGroup,
 h3 + .btn,
+h3 + .btnGroup,
 h4 + .btn,
+h4 + .btnGroup,
 h5 + .btn,
+h5 + .btnGroup,
 h6 + .btn,
-.richtext + .btn {
+h6 + .btnGroup,
+.richtext + .btn,
+.richtext + .btnGroup {
   margin-top: 2.5rem;
 }
 
@@ -2787,6 +2794,19 @@ h4 + .richtext,
 h5 + .richtext,
 h6 + .richtext {
   margin-top: calc(var(--spacer-y) * 1.5);
+}
+
+.pageTransition {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
 }
 
 .subheading {

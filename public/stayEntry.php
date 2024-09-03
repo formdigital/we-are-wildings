@@ -2,8 +2,8 @@
 
 <div class="hero heroFull">
     <div class="heroMain px-1 py-5">
-        <h1 class="serif uppercase font-size-4xl">Tawny Barn</h1>
-        <div class="tagList">
+        <h1 class="serif uppercase font-size-4xl fadeInReveal">Tawny Barn</h1>
+        <div class="tagList fadeInReveal">
             <div class="btn btnStroke btnSm btnStatic">Sleeps 6</div>
             <div class="btn btnStroke btnSm btnStatic">3 Bedrooms</div>
             <div class="btn btnStroke btnSm btnStatic">4 Beds</div>
@@ -74,17 +74,17 @@
         <div class="container no-gutters">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 articleMain">
-                    <div class="richtext articleBody" id="description">
+                    <div class="richtext articleBody fadeInReveal" id="description">
                         <h2>Description</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
-                    <div class="articleBreak"></div>
-                    <div class="richtext articleBody" id="amenities">
+                    <div class="articleBreak fadeInReveal"></div>
+                    <div class="richtext articleBody fadeInReveal" id="amenities">
                         <h2>Amenities</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
                 </div>
-                <div class="articleGalleryFull" id="gallery">
+                <div class="articleGalleryFull fadeInReveal" id="gallery">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="https://picsum.photos/id/12/1500/1000">
@@ -99,7 +99,7 @@
                             <img src="https://picsum.photos/id/15/1500/1200">
                         </div>
                     </div>
-                    <div class="carouselFooter">
+                    <div class="carouselFooter fadeInReveal">
                         <div class="nav">
                             <button class="prev"><svg><use href="images/icons.svg#arrow-left"/></svg></button>
                             <button class="next"><svg><use href="images/icons.svg#arrow-right"/></svg></button>
@@ -108,30 +108,30 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 articleMain">
-                    <div class="richtext articleBody" id="pets">
+                    <div class="richtext articleBody fadeInReveal" id="pets">
                         <h2>Pet Friendly</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem please read our <a href="#">Dog Policy</a> for more information.</p>
                     </div>
-                    <div class="articleImage">
+                    <div class="articleImage fadeInReveal">
                         <img src="https://picsum.photos/id/11/1500/1000">
                     </div>
-                    <div class="articleBreak"></div>
-                    <div class="richtext articleBody" id="floorPlan">
+                    <div class="articleBreak fadeInReveal"></div>
+                    <div class="richtext articleBody fadeInReveal" id="floorPlan">
                         <h2>Floor Plan</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
-                    <div class="articleImage">
+                    <div class="articleImage fadeInReveal">
                         <img src="https://picsum.photos/id/11/1500/1000">
                     </div>
-                    <div class="articleBreak"></div>
-                    <div class="richtext articleBody" id="location">
+                    <div class="articleBreak fadeInReveal"></div>
+                    <div class="richtext articleBody fadeInReveal" id="location">
                         <h2>Location</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
-                    <div class="articleImage">
+                    <div class="articleImage fadeInReveal">
                         <img src="https://picsum.photos/id/11/1500/1000">
                     </div>
-                    <div class="articleLinks">
+                    <div class="articleLinks fadeInReveal">
                         <a class="articleLinksItem" href="#">
                             <span class="label">Example external link</span>
                             <span class="icon"><svg><use href="images/icons.svg#external"/></svg></span>
@@ -145,11 +145,11 @@
                             <span class="icon"><svg><use href="images/icons.svg#download"/></svg></span>
                         </a>
                     </div>
-                    <div class="articleBreak"></div>
-                    <div class="richtext articleBody" id="reviews">
+                    <div class="articleBreak fadeInReveal"></div>
+                    <div class="richtext articleBody fadeInReveal" id="reviews">
                         <h2>Reviews</h2>
                     </div>
-                    <div class="articleReviews">
+                    <div class="articleReviews fadeInReveal">
                         <div class="articleReviewsCarousel">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -209,7 +209,7 @@
 </div>
 
 <div class="px-1 py-6 bg-green" id="booking">
-    <h2 class="serif uppercase font-size-2xl text-center">Book your stay</h2>
+    <h2 class="serif uppercase font-size-2xl text-center fadeInReveal">Book your stay</h2>
 </div>
 
 <?php include "includes/footer.php"; ?>

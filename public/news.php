@@ -2,7 +2,7 @@
 
 <div class="offsetHeader">
     <div class="px-1 pt-6 pb-4">
-        <h1 class="serif font-size-3xl uppercase text-center">News & Events</h1>
+        <h1 class="serif font-size-3xl uppercase text-center fadeInReveal">News & Events</h1>
     </div>
     <div class="pageNav pageNavCarousel px-1 py-1">
         <div class="swiper-wrapper">

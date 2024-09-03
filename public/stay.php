@@ -2,10 +2,10 @@
 
 <div class="hero heroFull">
     <div class="heroMain px-1 py-5">
-        <h1 class="serif uppercase font-size-4xl">Stay with us</h1>
+        <h1 class="serif uppercase font-size-4xl fadeInReveal">Stay with us</h1>
     </div>
-    <div class="heroFooter">
-        <h3 class="subheading uppercase font-size-sm text-center">Book your stay</h3>
+    <div class="heroFooter px-1 py-1">
+        <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
     </div>
     <div class="heroBg">
         <img src="https://placehold.co/1600x900">
@@ -17,7 +17,7 @@
         <div class="row justify-center">
             <div class="col-12 col-sm-8 col-md-11 col-lg-10 col-xl-8">
                 <div class="accommodationListings">
-                    <a class="accommodationListingsItem" href="stayEntry.php">
+                    <a class="accommodationListingsItem fadeInReveal" href="stayEntry.php">
                         <div class="image">
                             <img src="https://placehold.co/1000x1200">
                         </div>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="btn">More details</div>
                     </a>
-                    <a class="accommodationListingsItem" href="stayEntry.php">
+                    <a class="accommodationListingsItem fadeInReveal" href="stayEntry.php">
                         <div class="image">
                             <img src="https://placehold.co/1000x1200">
                         </div>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="btn">More details</div>
                     </a>
-                    <a class="accommodationListingsItem" href="stayEntry.php">
+                    <a class="accommodationListingsItem fadeInReveal" href="stayEntry.php">
                         <div class="image">
                             <img src="https://placehold.co/1000x1200">
                         </div>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="btn">More details</div>
                     </a>
-                    <a class="accommodationListingsItem" href="stayEntry.php">
+                    <a class="accommodationListingsItem fadeInReveal" href="stayEntry.php">
                         <div class="image">
                             <img src="https://placehold.co/1000x1200">
                         </div>
@@ -80,7 +80,7 @@
 </div>
 
 <div class="px-1 py-4 bt-light text-center">
-    <div class="testimonialsCarousel">
+    <div class="testimonialsCarousel fadeInReveal">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="testimonialsCarouselSlide">
@@ -137,13 +137,15 @@
 <div class="split bg-green">
     <div class="splitText px-1 py-4 justify-between">
         <div class="splitTextBlock">
-            <h2 class="serif uppercase font-size-2xl text-block-9">Frequently asked questions</h2>
+            <h2 class="serif uppercase font-size-2xl text-block-9 fadeInReveal">Frequently asked questions</h2>
         </div>
         <div class="splitTextBlock">
-            <div class="richtext text-block-30">
+            <div class="richtext text-block-30 fadeInReveal">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tellus neque, vitae faucibus sapien lacinia et. Vivamus volutpat pretium urna sit amet convallis. Aliquam molestie, ipsum quis ullamcorper accumsan, sapien augue porta odio, eu tincidunt purus urna sit amet erat.</p>
             </div>
-            <a class="btn" href="contact.php">Get in touch today</a>
+            <div class="btnGroup fadeInReveal">
+                <a class="btn" href="contact.php">Get in touch today</a>
+            </div>
         </div>
     </div>
     <div class="splitMedia">
@@ -152,7 +154,7 @@
 </div>
 
 <div class="py-4">
-    <div class="instaFeedHeader px-1">
+    <div class="instaFeedHeader px-1 fadeInReveal">
         <h2 class="title">Follow on Instagram</h2>
         <a href="#" target="_blank">@wearewildings</a>
     </div>

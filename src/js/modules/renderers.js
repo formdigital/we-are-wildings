@@ -1,4 +1,7 @@
 import { Renderer } from '@unseenco/taxi'
+import Lenis from 'lenis'
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import { Accordions } from './accordion'
 import { Animations } from './animation'
@@ -6,12 +9,25 @@ import { Carousels } from './carousel'
 import { Filters } from './filter'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
+import { initialTransition } from './transition'
 import { Videos } from './video'
 
 // Scripts to load on initial page entry
 function initialScripts() {
     const bodyScrollbarWidth = window.innerWidth - document.documentElement.clientWidth
     document.body.setAttribute('style',`--body-scrollbar-width: ${bodyScrollbarWidth}px;`)
+    
+    const lenis = new Lenis()
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+
+    initialTransition()
 }
 
 // Scripts to load on every page entry

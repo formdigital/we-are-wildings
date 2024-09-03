@@ -2,11 +2,11 @@
 
 <div class="px-1 offsetHeader">
     <div class="py-6">
-        <h1 class="serif font-size-3xl uppercase text-center">Terms & Conditions</h1>
+        <h1 class="serif font-size-3xl uppercase text-center fadeInReveal">Terms & Conditions</h1>
         <div class="container no-gutters pt-5">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <div class="richtext">
+                    <div class="richtext fadeInReveal">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                         <ul>
                             <li>Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt</li>

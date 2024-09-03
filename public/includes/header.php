@@ -10,6 +10,8 @@
 
     <body>
 
+        <div class="pageTransition"></div>
+
         <main data-taxi>
             <div data-taxi-view>
 
