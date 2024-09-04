@@ -150,10 +150,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: var(--spacer-y-x2) calc(var(--spacer-x) * 1.5);
+        padding: var(--spacer-y-x3) calc(var(--spacer-x) * 1.5);
 
         @include sm-breakpoint {
-            padding: var(--spacer-y-x2) calc((var(--spacer-x) * 2) + 1.5rem);
+            padding: var(--spacer-y-x3) calc((var(--spacer-x) * 2) + 1.5rem);
         }
 
         .quote {
@@ -164,6 +164,7 @@
 
         .details {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -172,6 +173,10 @@
             font-size: var(--font-size-sm);
             text-transform: uppercase;
             letter-spacing: 0.05em;
+
+            @include sm-breakpoint {
+                flex-direction: row;
+            }
         }
 
         .rating {

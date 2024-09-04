@@ -9,7 +9,7 @@
                 <li class="siteMenu__fadeIn"><a data-image="menuImageAbout" href="about.php">About</a></li>
                 <li class="siteMenu__fadeIn"><a data-image="menuImageStay" href="stay.php">Stay with Us</a></li>
                 <li class="siteMenu__fadeIn"><a data-image="menuImageNews" href="news.php">News & Events</a></li>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageContact" href="contact.php">Contacts Us</a></li>
+                <li class="siteMenu__fadeIn"><a data-image="menuImageContact" href="contact.php">Contact Us</a></li>
             </ul>
             <div class="siteMenu__fadeIn"><a class="btn btnStroke" href="#">Book now</a></div>
         </nav>

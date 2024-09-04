@@ -6,7 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Accordions } from './accordion'
 import { Animations } from './animation'
 import { Carousels } from './carousel'
+import { FancyboxModals } from './fancybox'
 import { Filters } from './filter'
+import { HeaderHide } from './header'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
 import { initialTransition } from './transition'
@@ -37,7 +39,9 @@ function enterScripts() {
     Accordions()
     Animations()
     Carousels()
+    FancyboxModals()
     Filters()
+    HeaderHide()
     Menu()
     PageNavs()
     Videos()

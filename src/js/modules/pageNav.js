@@ -7,17 +7,19 @@ export function PageNavs() {
     const pageNavLinks = document.querySelectorAll('.pageNavLink')
     const pageNavCarousels = document.querySelectorAll('.pageNavCarousel')
     const pageNavDropdown = document.querySelector('.pageNavDropdown')
-    let dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
+    const dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
 
     pageNavLinks.forEach(link => {
         const target = document.querySelector(`${link.dataset.target}`)
 
         link.addEventListener('click', () => {
+
+            let headerHeight = document.querySelector('.siteHeader').offsetHeight
             
             if (pageNavDropdown && !dropdownBreakpoint.matches) {
 
                 window.scrollTo({
-                    top: window.scrollY + target.getBoundingClientRect().top,
+                    top: window.scrollY + target.getBoundingClientRect().top - headerHeight,
                     behavior: "smooth",
                 })
 
@@ -52,6 +54,7 @@ export function PageNavs() {
 
         const hero = document.querySelector('.heroFull')
         const nav = document.querySelector('.heroFull + .pageNavContainer > .pageNavSticky')
+        let windowWidth = window.innerWidth
         let heroHeight
 
         function showHeroPageNav() {
@@ -60,18 +63,27 @@ export function PageNavs() {
         }
 
         showHeroPageNav()
-        window.addEventListener('resize', showHeroPageNav)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth !== windowWidth) {
+                showHeroPageNav()
+                windowWidth = window.innerWidth
+            }
+        })
     }
 
     if (pageNavDropdown) {
 
         const toggle = pageNavDropdown.querySelector('.toggle')
+        const backdrop = pageNavDropdown.querySelector('.backdrop')
         const dropdownLinks = pageNavDropdown.querySelectorAll('.pageNavLink')
         const bookBtn = document.querySelector('.pageNav .book-btn .pageNavLink')
         let isActive
 
         function showDropdown() {
             pageNavDropdown.classList.add('is-open')
+            if (document.body.classList.contains("siteHeader__scroll-up")) {
+                document.body.classList.remove("siteHeader__scroll-up")
+            }
         }
 
         function hideDropdown() {
@@ -88,6 +100,7 @@ export function PageNavs() {
         }
 
         toggle.addEventListener('click', toggleDropdown)
+        backdrop.addEventListener('click', toggleDropdown)
         dropdownLinks.forEach(link => {
             link.addEventListener('click', toggleDropdown)
         })
@@ -106,13 +119,14 @@ export function PageNavs() {
                 
                 if (footerTop < pageNavTop) {
 
-                    pageNav.classList.add('is-hidden')
-
                     if (isActive) {
+                        hideDropdown()
                         setTimeout(() => { 
-                            hideDropdown()
                             isActive = !isActive
+                            pageNav.classList.add('is-hidden')
                         },400)
+                    } else {
+                        pageNav.classList.add('is-hidden')
                     }
 
                 } else if (pageNavTop < footerTop && pageNav.classList.contains('is-hidden')) {

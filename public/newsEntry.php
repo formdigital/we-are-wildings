@@ -4,7 +4,7 @@
     <div class="py-6 container no-gutters">
         <div class="row justify-center">
             <div class="col-12 articleHero">
-                <h1 class="serif font-size-3xl uppercase text-center text-block-20 fadeInReveal">Our first Shepherds Hut now available for booking</h1>
+                <h1 class="serif font-size-3xl uppercase text-center text-block-15 fadeInReveal">Our first Shepherds Hut now available for booking</h1>
                 <div class="articleDetails text-center fadeInReveal">
                     <div class="category">Journal</div>
                     <div class="date">11 Jul 2024</div>

@@ -21,14 +21,17 @@
     <div class="pageNav pageNavSticky has-book-btn">
 
         <div class="pageNavDropdown">
+            <div class="backdrop"></div>
             <div class="dropdown">
-                <button class="btn btnSecondary pageNavLink" data-target="#description">Description</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#amenities">Amenities</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#gallery">Gallery</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#pets">Pets</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#floorPlan">Floor Plan</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#location">Location</button>
-                <button class="btn btnSecondary pageNavLink" data-target="#reviews">Reviews</button>
+                <div class="dropdown-container">
+                    <button class="btn btnSecondary pageNavLink" data-target="#description">Description</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#amenities">Amenities</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#gallery">Gallery</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#pets">Pets</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#floorPlan">Floor Plan</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#location">Location</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="#reviews">Reviews</button>
+                </div>
             </div>
             <button class="toggle">
                 <span class="label">Jump to section</span>
@@ -70,7 +73,7 @@
 
     </div>
 
-    <div class="px-1 py-6 overflow-hidden">
+    <div class="px-1 py-5 overflow-hidden">
         <div class="container no-gutters">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 articleMain">
@@ -87,16 +90,24 @@
                 <div class="articleGalleryFull fadeInReveal" id="gallery">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/id/12/1500/1000">
+                            <a href="https://picsum.photos/id/12/1500/1000" data-fancybox="gallery">
+                                <img src="https://picsum.photos/id/12/1500/1000">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/id/13/1200/1200">
+                            <a href="https://picsum.photos/id/13/1200/1200" data-fancybox="gallery">
+                                <img src="https://picsum.photos/id/13/1200/1200">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/id/14/1200/1500">
+                            <a href="https://picsum.photos/id/14/1200/1500" data-fancybox="gallery">
+                                <img src="https://picsum.photos/id/14/1200/1500">
+                            </a>
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/id/15/1500/1200">
+                            <a href="https://picsum.photos/id/15/1500/1200" data-fancybox="gallery">
+                                <img src="https://picsum.photos/id/15/1500/1200">
+                            </a>
                         </div>
                     </div>
                     <div class="carouselFooter fadeInReveal">

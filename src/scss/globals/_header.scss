@@ -1,3 +1,11 @@
+:root {
+    --header-height: calc((var(--spacer-y) * 1.5) + max(var(--font-size-lg), 2rem));
+
+    @include sm-breakpoint {
+        --header-height: calc((var(--spacer-y) * 1.5) + max(var(--font-size-lg), 2.5rem));
+    }
+}
+
 .siteHeader {
     position: absolute;
     z-index: 1000;
@@ -70,6 +78,52 @@
 }
 
 .offsetHeader {
-    --header-height: calc((var(--spacer-y) * 1.5) + 2.5rem);
     padding-top: var(--header-height);
+}
+
+body {
+
+    &.siteHeader__fixed {
+
+        .siteHeader {
+            position: fixed;
+            color: var(--color-green);
+            background: var(--color-white);
+            box-shadow: 0px 1px 0px 0px rgba(25,27,25,0.1);
+            transform: translateY(-100%);
+
+            .siteMenuToggle {
+    
+                span {
+                    background: var(--color-green);
+                }
+            }
+
+            .btn {
+                color: var(--color-green);
+                border: 1px solid rgba(25,27,25,0.2);
+                background: transparent;
+        
+                &:not(.btnStatic):not(.btnBare):hover {
+                    color: var(--color-white);
+                    border: 1px solid var(--color-green);
+                    background: var(--color-green);
+                }
+            }
+        }
+    }
+
+    &.siteHeader__can-animate {
+
+        .siteHeader {
+            transition: transform 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+    }
+
+    &.siteHeader__scroll-up {
+
+        .siteHeader {
+            transform: translateY(0);
+        }
+    }
 }

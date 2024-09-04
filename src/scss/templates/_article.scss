@@ -114,12 +114,19 @@
     
             .details {
                 display: flex;
-                align-items: center;
-                gap: 1em;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 0.5em 1em;
                 margin-top: var(--font-size-md);
                 font-size: var(--font-size-sm);
                 text-transform: uppercase;
                 letter-spacing: 0.05em;
+
+                @include sm-breakpoint {
+                    flex-direction: row;
+                    align-items: center;
+                }
             }
     
             .rating {

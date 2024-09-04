@@ -17,7 +17,7 @@
 </div>
 
 <div class="split">
-    <div class="splitText px-1 py-4 justify-between">
+    <div class="splitText px-1 justify-between">
         <div class="splitTextBlock">
             <h2 class="serif uppercase font-size-2xl text-block-9 fadeInReveal">Connect, unwind & discover</h2>
         </div>

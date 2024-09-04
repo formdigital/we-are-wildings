@@ -25,6 +25,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@unseenco/taxi": "^1.6.0",
     "accordion-js": "^3.3.4",
     "gsap": "^3.12.5",

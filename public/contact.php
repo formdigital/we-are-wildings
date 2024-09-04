@@ -10,7 +10,7 @@
 </div>
 
 <div class="split bg-green">
-    <div class="splitText px-1 py-4 justify-center">
+    <div class="splitText px-1 justify-center">
         <div class="contactDetailsHeading fadeInReveal">Address</div>
         <a class="contactDetailsLink fadeInReveal" href="#" target="_blank">
             <span>Plot Farm</span>

@@ -1,0 +1,82 @@
+.fancybox__container {
+    --fancybox-bg: #191b19;
+
+    z-index: 20000;
+
+    iframe {
+        pointer-events: auto !important;
+    }
+}
+
+.fancybox__toolbar {
+    padding: calc(var(--gutter-x) * 0.5);
+
+    .f-button[data-fancybox-close] {
+        --f-button-svg-width: 0.75rem;
+        --f-button-svg-height: 0.75rem;
+        --f-button-svg-stroke-width: 2;
+
+        width: 2.25rem;
+        height: 2.25rem;
+        color: var(--color-green);
+        border-radius: 50%;
+        background: var(--color-white);
+        cursor: pointer !important;
+    }
+}
+
+.fancybox__nav {
+    --f-button-next-pos: calc(var(--gutter-x) * 0.5);
+    --f-button-prev-pos: calc(var(--gutter-x) * 0.5);
+
+    .f-button {
+        --f-button-svg-width: 0.75rem;
+        --f-button-svg-height: 0.75rem;
+        --f-button-svg-stroke-width: 2;
+
+        width: 2.25rem;
+        height: 2.25rem;
+        color: var(--color-green);
+        border-radius: 50%;
+        background: var(--color-white);
+        cursor: pointer !important;
+    
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+            color: var(--color-white);
+            background: rgba(50,50,50,0.5);
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+        }
+
+        svg {
+            filter: none;
+        }
+
+        @media (hover: hover) {
+
+            &:hover:not([disabled]) {
+                background: rgba(80,80,80,0.5);
+            }
+        }
+    }
+}
+
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
+    padding-top: 4px;
+
+    .f-button[data-fancybox-close] {
+        --f-button-svg-width: 0.75rem;
+        --f-button-svg-height: 0.75rem;
+        --f-button-svg-stroke-width: 2;
+
+        top: calc(var(--gutter-x) * 0.5);
+        right: calc(var(--gutter-x) * 0.5);
+        width: 2.25rem;
+        height: 2.25rem;
+        color: var(--color-green);
+        border-radius: 50%;
+        background: var(--color-white);
+        opacity: 1;
+        cursor: pointer !important;
+    }
+}
