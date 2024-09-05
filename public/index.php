@@ -1,4 +1,4 @@
-<?php $invertHeader = "true"; include "includes/header.php"; ?>
+<?php $page = "home"; $invertHeader = "true"; include "includes/header.php"; ?>
 
 <div class="hero heroFull">
     <div class="heroMain px-1 py-5">
@@ -100,6 +100,10 @@
     <div class="py-3">
         <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
     </div>
+</div>
+
+<div class="mediaFeature parallaxContainer">
+    <img src="https://images.unsplash.com/photo-1703291544385-2e616d4fda92?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 </div>
 
 <div class="px-1 overflow-hidden">

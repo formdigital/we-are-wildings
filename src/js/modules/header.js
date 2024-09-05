@@ -1,3 +1,25 @@
+export function HeaderHeight() {
+
+    let windowWidth = window.innerWidth
+    let headerHeight
+    let headerContainerHeight
+
+    function setHeight() {
+        headerHeight = document.querySelector('.siteHeader').offsetHeight
+        headerContainerHeight = document.querySelector('.siteHeaderContainer').offsetHeight
+        document.body.style.setProperty('--header-height', `${headerHeight}px`)
+        document.body.style.setProperty('--header-container-height', `${headerContainerHeight}px`)
+    }
+
+    setHeight()
+    window.addEventListener('resize', () => {
+        if (window.innerWidth !== windowWidth) {
+            setHeight()
+            windowWidth = window.innerWidth
+        }
+    })
+}
+
 export function HeaderHide() {
 
     // Show/hide header on scroll

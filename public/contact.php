@@ -32,8 +32,9 @@
             <a href="#" target="_blank"><svg><use href="images/icons.svg#facebook"/></svg></a>
         </div>
     </div>
-    <div class="splitMedia">
-        <img src="https://placehold.co/1000x1200">
+    <div class="splitMedia contactMap">
+        <a class="contactMapPin" href="#" target="_blank"></a>
+        <img src="images/map.png">
     </div>
 </div>
 

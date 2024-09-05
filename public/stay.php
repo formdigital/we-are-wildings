@@ -1,6 +1,6 @@
 <?php $page = "stay"; $invertHeader = "true"; include "includes/header.php"; ?>
 
-<div class="hero heroFull">
+<div class="hero heroLg">
     <div class="heroMain px-1 py-5">
         <h1 class="serif uppercase font-size-4xl fadeInReveal">Stay with us</h1>
     </div>

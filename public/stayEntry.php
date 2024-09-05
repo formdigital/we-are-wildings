@@ -86,6 +86,89 @@
                         <h2>Amenities</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
+                    <div class="amenitiesList">
+                        <div class="amenitiesListContainer">
+                            <div class="amenitiesListCollapse">
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Sleeps 6</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">3 Beds</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Single Floor Dwelling</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">1 x Super King Master with Ensuite Shower Room</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">1 x Super King Zip and Link</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">1 x Bunkroom Sleeping 2 (bunk beds for all ages)</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">1 x main bathroom (with bath)</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">We welcome up to 2 well behaved dog (additional fee applies)</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Hot Tub</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Open plan lounge/kitchen/diner</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Fully equipped kitchen (including Nespresso machine, dishwasher and washing machine)</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Outdoor eating area</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Wi-Fi</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Welcome Basket</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Electric car charge points</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Roberts Radio</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Smart TVs</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Hairdryer</div>
+                                </div>
+                                <div class="amenitiesListItem">
+                                    <div class="icon"></div>
+                                    <div class="text">Wheelchair accessible</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="amenitiesListBtn btn btnSm btnStroke">View more</button>
+                    </div>
                 </div>
                 <div class="articleGalleryFull fadeInReveal" id="gallery">
                     <div class="swiper-wrapper">

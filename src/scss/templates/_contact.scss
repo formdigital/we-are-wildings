@@ -102,3 +102,31 @@
         }
     }
 }
+
+.contactMap {
+
+    &Pin {
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        bottom: 50%;
+        display: block;
+        width: calc(var(--gutter-x) * 2.4);
+        height: calc(var(--gutter-x) * 2.7);
+        background-image: url('../../img/map-pin.svg');
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-50%,0);
+        animation: bounce 0.4s ease infinite alternate;
+
+        @keyframes bounce {
+            0% {
+                transform:translate(-50%,0);
+            }
+            100% {
+                transform:translate(-50%,-20px);
+            }
+          }
+    }
+}

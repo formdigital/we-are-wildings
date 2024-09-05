@@ -4,11 +4,12 @@ import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 import { Accordions } from './accordion'
+import { AmenitiesList } from './amenitiesList'
 import { Animations } from './animation'
 import { Carousels } from './carousel'
 import { FancyboxModals } from './fancybox'
 import { Filters } from './filter'
-import { HeaderHide } from './header'
+import { HeaderHeight, HeaderHide } from './header'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
 import { initialTransition } from './transition'
@@ -37,10 +38,12 @@ function enterScripts() {
     console.log('page entered')
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     Accordions()
+    AmenitiesList()
     Animations()
     Carousels()
     FancyboxModals()
     Filters()
+    HeaderHeight()
     HeaderHide()
     Menu()
     PageNavs()

@@ -5,11 +5,11 @@
     <div class="siteMenuMain">
         <nav class="siteMenuNav serif uppercase">
             <ul>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageHome" href="./" class="active">Home</a></li>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageAbout" href="about.php">About</a></li>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageStay" href="stay.php">Stay with Us</a></li>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageNews" href="news.php">News & Events</a></li>
-                <li class="siteMenu__fadeIn"><a data-image="menuImageContact" href="contact.php">Contact Us</a></li>
+                <li class="siteMenu__fadeIn"><a class="<?php if ($page == 'home') {echo 'active';} ?>" data-image="menuImageHome" href="./">Home</a></li>
+                <li class="siteMenu__fadeIn"><a class="<?php if ($page == 'about') {echo 'active';} ?>" data-image="menuImageAbout" href="about.php">About</a></li>
+                <li class="siteMenu__fadeIn"><a class="<?php if ($page == 'stay') {echo 'active';} ?>" data-image="menuImageStay" href="stay.php">Stay with Us</a></li>
+                <li class="siteMenu__fadeIn"><a class="<?php if ($page == 'news') {echo 'active';} ?>" data-image="menuImageNews" href="news.php">News & Events</a></li>
+                <li class="siteMenu__fadeIn"><a class="<?php if ($page == 'contact') {echo 'active';} ?>" data-image="menuImageContact" href="contact.php">Contact Us</a></li>
             </ul>
             <div class="siteMenu__fadeIn"><a class="btn btnStroke" href="#">Book now</a></div>
         </nav>
