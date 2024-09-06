@@ -10,8 +10,55 @@
     </div>
 </div>
 
-<div class="px-1 py-6">
-    
+<div class="px-1 py-6 overflow-hidden">
+    <div class="text-center">
+        <h2 class="serif uppercase font-size-2xl fadeInReveal">We are Wildings</h2>
+        <div class="richtext text-block-50 fadeInReveal">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere.</p>
+        </div>
+    </div>
+</div>
+
+<div class="px-1 py-6 overflow-hidden">
+    <div class="container no-gutters">
+        <div class="text-center pb-4">
+            <h2 class="serif uppercase font-size-2xl fadeInReveal">The Renovation</h2>
+            <div class="richtext text-block-50 fadeInReveal">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere.</p>
+            </div>
+        </div>
+        <div class="articleGalleryFull fadeInReveal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://picsum.photos/id/12/1500/1000" data-fancybox="gallery">
+                        <img src="https://picsum.photos/id/12/1500/1000">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://picsum.photos/id/13/1200/1200" data-fancybox="gallery">
+                        <img src="https://picsum.photos/id/13/1200/1200">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://picsum.photos/id/14/1200/1500" data-fancybox="gallery">
+                        <img src="https://picsum.photos/id/14/1200/1500">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://picsum.photos/id/15/1500/1200" data-fancybox="gallery">
+                        <img src="https://picsum.photos/id/15/1500/1200">
+                    </a>
+                </div>
+            </div>
+            <div class="carouselFooter fadeInReveal">
+                <div class="nav">
+                    <button class="prev"><svg><use href="images/icons.svg#arrow-left"/></svg></button>
+                    <button class="next"><svg><use href="images/icons.svg#arrow-right"/></svg></button>
+                </div>
+                <div class="scrollbar"></div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="split bg-green">

@@ -1094,6 +1094,10 @@ html.lenis, html.lenis body {
   max-width: 40em;
 }
 
+.text-block-50 {
+  max-width: 50em;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
