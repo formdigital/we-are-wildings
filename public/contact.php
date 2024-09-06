@@ -45,19 +45,19 @@
     <div class="pageNav pageNavCarousel pageNavSticky px-1 py-1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#booking">Bookings</button>
+                <button class="btn btnSecondary btnSm pageNavLink" data-target="booking">Bookings</button>
             </div>
             <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#yourStay">Your Stay</button>
+                <button class="btn btnSecondary btnSm pageNavLink" data-target="yourStay">Your Stay</button>
             </div>
             <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#activities">Activities</button>
+                <button class="btn btnSecondary btnSm pageNavLink" data-target="activities">Activities</button>
             </div>
             <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#somethingElse1">Something Else</button>
+                <button class="btn btnSecondary btnSm pageNavLink" data-target="somethingElse1">Something Else</button>
             </div>
             <div class="swiper-slide">
-                <button class="btn btnSecondary btnSm pageNavLink" data-target="#somethingElse2">Something Else</button>
+                <button class="btn btnSecondary btnSm pageNavLink" data-target="somethingElse2">Something Else</button>
             </div>
         </div>
         <button class="prev"><svg><use href="images/icons.svg#circle-arrow-left"/></svg></button>
@@ -68,7 +68,7 @@
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
 
-                    <h3 class="accordionGroupTitle fadeInReveal" id="booking">Bookings</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal pageNavTarget" id="booking">Bookings</h3>
 
                     <div class="accordionContainer fadeInReveal">
 
@@ -118,7 +118,7 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle fadeInReveal" id="yourStay">Your Stay</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal pageNavTarget" id="yourStay">Your Stay</h3>
 
                     <div class="accordionContainer fadeInReveal">
 
@@ -168,7 +168,7 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle fadeInReveal" id="activities">Activities</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal pageNavTarget" id="activities">Activities</h3>
 
                     <div class="accordionContainer fadeInReveal">
                         
@@ -196,7 +196,7 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle fadeInReveal" id="somethingElse1">Something Else</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal pageNavTarget" id="somethingElse1">Something Else</h3>
 
                     <div class="accordionContainer fadeInReveal">
                         
@@ -224,7 +224,7 @@
 
                     </div>
                     
-                    <h3 class="accordionGroupTitle fadeInReveal" id="somethingElse2">Something Else</h3>
+                    <h3 class="accordionGroupTitle fadeInReveal pageNavTarget" id="somethingElse2">Something Else</h3>
 
                     <div class="accordionContainer fadeInReveal">
                         

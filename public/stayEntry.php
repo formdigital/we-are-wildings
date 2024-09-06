@@ -24,13 +24,13 @@
             <div class="backdrop"></div>
             <div class="dropdown">
                 <div class="dropdown-container">
-                    <button class="btn btnSecondary pageNavLink" data-target="#description">Description</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#amenities">Amenities</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#gallery">Gallery</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#pets">Pets</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#floorPlan">Floor Plan</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#location">Location</button>
-                    <button class="btn btnSecondary pageNavLink" data-target="#reviews">Reviews</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="description">Description</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="amenities">Amenities</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="gallery">Gallery</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="pets">Pets</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="floorPlan">Floor Plan</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="location">Location</button>
+                    <button class="btn btnSecondary pageNavLink" data-target="reviews">Reviews</button>
                 </div>
             </div>
             <button class="toggle">
@@ -42,25 +42,25 @@
         <div class="pageNavCarousel">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#description">Description</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="description">Description</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#amenities">Amenities</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="amenities">Amenities</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#gallery">Gallery</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="gallery">Gallery</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#pets">Pets</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="pets">Pets</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#floorPlan">Floor Plan</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="floorPlan">Floor Plan</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#location">Location</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="location">Location</button>
                 </div>
                 <div class="swiper-slide">
-                    <button class="btn btnSm btnBare pageNavLink" data-target="#reviews">Reviews</button>
+                    <button class="btn btnSm btnBare pageNavLink" data-target="reviews">Reviews</button>
                 </div>
             </div>
             <button class="prev"><svg><use href="images/icons.svg#circle-arrow-left"/></svg></button>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="book-btn">
-            <button class="btn pageNavLink" data-target="#booking">Book now</button>
+            <button class="btn pageNavLink" data-target="booking">Book now</button>
         </div>
 
     </div>
@@ -77,12 +77,12 @@
         <div class="container no-gutters">
             <div class="row justify-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 articleMain">
-                    <div class="richtext articleBody fadeInReveal" id="description">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="description">
                         <h2>Description</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
                     <div class="articleBreak fadeInReveal"></div>
-                    <div class="richtext articleBody fadeInReveal" id="amenities">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="amenities">
                         <h2>Amenities</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
@@ -211,7 +211,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="articleGalleryFull fadeInReveal" id="gallery">
+                <div class="articleGalleryFull fadeInReveal pageNavTarget" id="gallery">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="https://picsum.photos/id/12/1500/1000" data-fancybox="gallery">
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6 articleMain">
-                    <div class="richtext articleBody fadeInReveal" id="pets">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="pets">
                         <h2>Pet Friendly</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem please read our <a href="#">Dog Policy</a> for more information.</p>
                     </div>
@@ -251,7 +251,7 @@
                         <img src="https://picsum.photos/id/11/1500/1000">
                     </div>
                     <div class="articleBreak fadeInReveal"></div>
-                    <div class="richtext articleBody fadeInReveal" id="floorPlan">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="floorPlan">
                         <h2>Floor Plan</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
@@ -259,7 +259,7 @@
                         <img src="https://picsum.photos/id/11/1500/1000">
                     </div>
                     <div class="articleBreak fadeInReveal"></div>
-                    <div class="richtext articleBody fadeInReveal" id="location">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="location">
                         <h2>Location</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
@@ -281,7 +281,7 @@
                         </a>
                     </div>
                     <div class="articleBreak fadeInReveal"></div>
-                    <div class="richtext articleBody fadeInReveal" id="reviews">
+                    <div class="richtext articleBody fadeInReveal pageNavTarget" id="reviews">
                         <h2>Reviews</h2>
                     </div>
                     <div class="articleReviews fadeInReveal">
@@ -343,7 +343,7 @@
 
 </div>
 
-<div class="px-1 py-6 bg-green" id="booking">
+<div class="px-1 py-6 bg-green pageNavTarget" id="booking">
     <h2 class="serif uppercase font-size-2xl text-center fadeInReveal">Book your stay</h2>
     <div data-calendar-key="3BA6D7EE6151C45EDA3D810D9EAA58A9A72C66C4F09702F7A149ED9053FC93F6922459BA9B30FC00548DD35FB666361DACE2502BE0AAA26D"
         data-calendar-widescreen-months="2"

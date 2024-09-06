@@ -1,31 +1,52 @@
 import Swiper from 'swiper'
-import { Navigation } from 'swiper/modules'
+import { FreeMode, Navigation } from 'swiper/modules'
 
 export function PageNavs() {
     
     const pageNav = document.querySelector('.pageNav')
     const pageNavLinks = document.querySelectorAll('.pageNavLink')
+    const pageNavTargets = document.querySelectorAll('.pageNavTarget');
     const pageNavCarousels = document.querySelectorAll('.pageNavCarousel')
     const pageNavDropdown = document.querySelector('.pageNavDropdown')
     const dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
 
-    // const links = document.querySelectorAll('.links');
-    // const sections = document.querySelectorAll('section');
+    // Add active state to links
+    window.onscroll = () => {
+        let current
 
-    // function changeLinkState() {
-    // let index = sections.length;
+        pageNavTargets.forEach((target) => {
 
-    // while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
-    
-    // links.forEach((link) => link.classList.remove('active'));
-    // links[index].classList.add('active');
-    // }
+            let targetTopDistance = window.scrollY + target.getBoundingClientRect().top
+            let headerHeight = document.querySelector('.siteHeader').offsetHeight
 
-    // changeLinkState();
-    // window.addEventListener('scroll', changeLinkState);
+            if (pageNavDropdown && !dropdownBreakpoint.matches) {
 
+                if (window.scrollY >= targetTopDistance - headerHeight - 60) {
+                    current = target.getAttribute('id')
+                }
+
+            } else {
+
+                let pageNavHeight = document.querySelector('.pageNav').offsetHeight
+
+                if (window.scrollY >= targetTopDistance - headerHeight - pageNavHeight - 60) {
+                    current = target.getAttribute('id')
+                }
+            }
+        })
+
+        pageNavLinks.forEach((link) => {
+            const target = link.dataset.target
+            link.classList.remove('active')
+            if (current == target) {
+                link.classList.add('active')
+            }
+        })
+    }
+
+    // Scroll to link target
     pageNavLinks.forEach(link => {
-        const target = document.querySelector(`${link.dataset.target}`)
+        const target = document.querySelector(`#${link.dataset.target}`)
 
         link.addEventListener('click', () => {
 
@@ -66,12 +87,15 @@ export function PageNavs() {
         })
     })
     
+    // Carousel
     pageNavCarousels.forEach(carousel => {
         const prevBtn = carousel.querySelector('.pageNavCarousel .prev')
         const nextBtn = carousel.querySelector('.pageNavCarousel .next')
         const pageNavSwiper = new Swiper(carousel, {
-            modules: [Navigation],
+            modules: [FreeMode,Navigation],
             slidesPerView: 'auto',
+            freeMode: true,
+            slideToClickedSlide: true,
             centerInsufficientSlides: true,
             focusableElements: 'input, select, option, textarea, video, label',
             navigation: {
@@ -102,6 +126,7 @@ export function PageNavs() {
         })
     }
 
+    // Responsive dropdown
     if (pageNavDropdown) {
 
         const toggle = pageNavDropdown.querySelector('.toggle')

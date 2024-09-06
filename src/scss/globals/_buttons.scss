@@ -3,6 +3,7 @@
     --btn-color: var(--color-white);
     --btn-background: var(--color-green);
 
+    position: relative;
     flex-shrink: 0;
     display: inline-flex;
     justify-content: center;
@@ -37,6 +38,7 @@
             background: transparent;
         }
 
+        &.active,
         &.mixitup-control-active {
             border: 1px solid currentColor;
             background: transparent;
@@ -46,6 +48,29 @@
     &Bare {
         --btn-color: var(--color-green);
         --btn-background: transparent;
+            
+        &::after {
+            content: '';
+            position: absolute;
+            left: calc(var(--btn-height) * 0.5);
+            right: calc(var(--btn-height) * 0.5);
+            bottom: calc((var(--btn-height) * 0.5) - 1em);
+            border-bottom: 1px solid var(--btn-color);
+            transform: scaleX(0);
+            transform-origin: right;
+            will-change: transform;
+            transition: transform 0.3s ease;
+        }
+
+        &.active,
+        &.mixitup-control-active {
+            
+            &::after {
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.3s 0.1s ease;
+            }
+        }
     }
 
     &Stroke {
