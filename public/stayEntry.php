@@ -87,87 +87,128 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
                     <div class="amenitiesList">
-                        <div class="amenitiesListContainer">
-                            <div class="amenitiesListCollapse">
+                        <div class="amenitiesListCollapse">
+                            <div class="amenitiesListContainer">
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-sleeps"/></svg>
+                                    </div>
                                     <div class="text">Sleeps 6</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-bed"/></svg>
+                                    </div>
                                     <div class="text">3 Beds</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-house"/></svg>
+                                    </div>
                                     <div class="text">Single Floor Dwelling</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-bed"/></svg>
+                                    </div>
                                     <div class="text">1 x Super King Master with Ensuite Shower Room</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-bed"/></svg>
+                                    </div>
                                     <div class="text">1 x Super King Zip and Link</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-bed"/></svg>
+                                    </div>
                                     <div class="text">1 x Bunkroom Sleeping 2 (bunk beds for all ages)</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-bathroom"/></svg>
+                                    </div>
                                     <div class="text">1 x main bathroom (with bath)</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-pets"/></svg>
+                                    </div>
                                     <div class="text">We welcome up to 2 well behaved dog (additional fee applies)</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-hot-tub"/></svg>
+                                    </div>
                                     <div class="text">Hot Tub</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-dining"/></svg>
+                                    </div>
                                     <div class="text">Open plan lounge/kitchen/diner</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-kitchen"/></svg>
+                                    </div>
                                     <div class="text">Fully equipped kitchen (including Nespresso machine, dishwasher and washing machine)</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-outdoor-dining"/></svg>
+                                    </div>
                                     <div class="text">Outdoor eating area</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-wifi"/></svg>
+                                    </div>
                                     <div class="text">Wi-Fi</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-gift"/></svg>
+                                    </div>
                                     <div class="text">Welcome Basket</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-ev-charging"/></svg>
+                                    </div>
                                     <div class="text">Electric car charge points</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-radio"/></svg>
+                                    </div>
                                     <div class="text">Roberts Radio</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-tv"/></svg>
+                                    </div>
                                     <div class="text">Smart TVs</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-hairdryer"/></svg>
+                                    </div>
                                     <div class="text">Hairdryer</div>
                                 </div>
                                 <div class="amenitiesListItem">
-                                    <div class="icon"></div>
+                                    <div class="icon">
+                                        <svg><use href="images/icons.svg#amenities-wheelchair"/></svg>
+                                    </div>
                                     <div class="text">Wheelchair accessible</div>
                                 </div>
                             </div>
                         </div>
-                        <button class="amenitiesListBtn btn btnSm btnStroke">View more</button>
+                        <button class="amenitiesListBtn btn btnSm btnStroke">
+                            <span class="label">View more</span>
+                            <svg><use href="images/icons.svg#dropdown-arrow"/></svg>
+                        </button>
                     </div>
                 </div>
                 <div class="articleGalleryFull fadeInReveal" id="gallery">
@@ -222,8 +263,8 @@
                         <h2>Location</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere. Etiam sagittis nec quam eu accumsan. Praesent in metus et odio tincidunt gravida. In a risus sollicitudin, finibus purus sit amet, pellentesque lorem. Curabitur quis tincidunt massa. Mauris cursus varius porta. Fusce metus lorem, blandit in porttitor sit amet, hendrerit quis dolor.</p>
                     </div>
-                    <div class="articleImage fadeInReveal">
-                        <img src="https://picsum.photos/id/11/1500/1000">
+                    <div class="articleMap fadeInReveal">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.3776474029232!2d-4.249687722422004!3d55.856113973122696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48884554df7c8dbd%3A0xcd2765787951a903!2sForm%20Digital!5e0!3m2!1sen!2suk!4v1725614154360!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="articleLinks fadeInReveal">
                         <a class="articleLinksItem" href="#">
@@ -304,6 +345,12 @@
 
 <div class="px-1 py-6 bg-green" id="booking">
     <h2 class="serif uppercase font-size-2xl text-center fadeInReveal">Book your stay</h2>
+    <div data-calendar-key="3BA6D7EE6151C45EDA3D810D9EAA58A9A72C66C4F09702F7A149ED9053FC93F6922459BA9B30FC00548DD35FB666361DACE2502BE0AAA26D"
+        data-calendar-widescreen-months="2"
+        data-calendar-property-id="580474"
+        data-calendar-departure-picker="true">
+        Your widget will appear here.
+    </div>
 </div>
 
 <?php include "includes/footer.php"; ?>

@@ -9,28 +9,59 @@ export function PageNavs() {
     const pageNavDropdown = document.querySelector('.pageNavDropdown')
     const dropdownBreakpoint = window.matchMedia("(min-width: 720px)")
 
+    // const links = document.querySelectorAll('.links');
+    // const sections = document.querySelectorAll('section');
+
+    // function changeLinkState() {
+    // let index = sections.length;
+
+    // while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    
+    // links.forEach((link) => link.classList.remove('active'));
+    // links[index].classList.add('active');
+    // }
+
+    // changeLinkState();
+    // window.addEventListener('scroll', changeLinkState);
+
     pageNavLinks.forEach(link => {
         const target = document.querySelector(`${link.dataset.target}`)
 
         link.addEventListener('click', () => {
 
             let headerHeight = document.querySelector('.siteHeader').offsetHeight
+            let pageScroll = window.scrollY
+            let targetTopDistance = window.scrollY + target.getBoundingClientRect().top
             
             if (pageNavDropdown && !dropdownBreakpoint.matches) {
 
-                window.scrollTo({
-                    top: window.scrollY + target.getBoundingClientRect().top - headerHeight,
-                    behavior: "smooth",
-                })
+                if (pageScroll > (targetTopDistance - 30)) {
+                    window.scrollTo({
+                        top: targetTopDistance - headerHeight - 30,
+                        behavior: "smooth",
+                    })
+                } else {
+                    window.scrollTo({
+                        top: targetTopDistance - 30,
+                        behavior: "smooth",
+                    })
+                }
 
             } else {
 
                 let pageNavHeight = document.querySelector('.pageNav').offsetHeight
-                window.scrollTo({
-                    top: window.scrollY + target.getBoundingClientRect().top - pageNavHeight - 16,
-                    behavior: "smooth",
-                })
 
+                if (pageScroll > (targetTopDistance - pageNavHeight - 30)) {
+                    window.scrollTo({
+                        top: targetTopDistance - pageNavHeight - headerHeight - 30,
+                        behavior: "smooth",
+                    })
+                } else {
+                    window.scrollTo({
+                        top: targetTopDistance - pageNavHeight - 30,
+                        behavior: "smooth",
+                    })
+                }
             }
         })
     })
