@@ -962,6 +962,11 @@ html.lenis, html.lenis body {
   color: var(--color-white);
 }
 
+.bg-yellow {
+  background-color: var(--color-yellow);
+  color: var(--color-white);
+}
+
 .px-1 {
   padding-left: var(--spacer-x);
   padding-right: var(--spacer-x);
@@ -2425,6 +2430,11 @@ h6 + .btnGroup,
 .split {
   display: flex;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 960px) {
+  .splitReverse {
+    flex-direction: row-reverse;
+  }
 }
 .splitText, .splitMedia {
   width: 100%;

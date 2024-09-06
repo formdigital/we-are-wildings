@@ -56,6 +56,13 @@
     display: flex;
     flex-wrap: wrap;
 
+    &Reverse {
+
+        @include md-breakpoint {
+            flex-direction: row-reverse;
+        }
+    }
+
     &Text,
     &Media {
         width: 100%;
