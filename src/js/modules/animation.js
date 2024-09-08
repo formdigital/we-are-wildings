@@ -55,6 +55,79 @@ export function Animations() {
     if (document.querySelector('.fadeInReveal')) {
         gsap.set('.fadeInReveal', {autoAlpha: 0, y: 30})
     }
+
+    // About page history section
+    if (document.querySelector('.historyContainer')) {
+
+        const background = document.querySelector('.historySticky .background')
+        const backgroundImage = background.querySelector('img')
+        const left = document.querySelector('.historySticky .left')
+        const right = document.querySelector('.historySticky .right')
+        const content = document.querySelector('.historyContent')
+
+        gsap.set(background, {
+            clipPath: 'inset(0% 30% round 4px)',
+        })
+
+        gsap.set(content, {
+            opacity: 0,
+        })
+
+        gsap.to(background, {
+            clipPath: 'inset(0% 0% round 4px)',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: content,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+            },
+        })
+
+        gsap.to(backgroundImage, {
+            opacity: 0.2,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: content,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+            },
+        })
+
+        gsap.to(left, {
+            xPercent: -100,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: content,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+            },
+        })
+
+        gsap.to(right, {
+            xPercent: 100,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: content,
+                start: 'top bottom',
+                end: 'top top',
+                scrub: true,
+            },
+        })
+
+        gsap.to(content, {
+            opacity: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: content,
+                start: '50% 90%',
+                end: '50% 60%',
+                scrub: true,
+            },
+        })
+    }
 }
 
 export function FadeIns() {

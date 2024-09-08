@@ -19,6 +19,30 @@
     </div>
 </div>
 
+<div class="historyContainer">
+    <div class="historySticky">
+        <div class="background">
+            <img src="https://images.unsplash.com/photo-1595079917801-4a04e2985fba?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        </div>
+        <div class="left">
+            <img src="https://picsum.photos/id/12/1200/1200">
+            <img src="https://picsum.photos/id/12/1200/1200">
+            <img src="https://picsum.photos/id/12/1200/1200">
+        </div>
+        <div class="right">
+            <img src="https://picsum.photos/id/12/1200/1200">
+            <img src="https://picsum.photos/id/12/1200/1200">
+            <img src="https://picsum.photos/id/12/1200/1200">
+        </div>
+    </div>
+    <div class="historyContent px-1 py-6 text-center">
+        <h2 class="serif uppercase font-size-2xl">History of the farm</h2>
+        <div class="richtext text-block-50">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis mauris nulla. Aliquam scelerisque justo at lobortis sagittis. Suspendisse finibus nec libero non facilisis. Cras faucibus molestie neque vel sodales. Nunc vulputate ligula dolor, pretium ornare nisi suscipit non. Integer vel placerat ante. Sed euismod enim nec tellus laoreet, quis sodales leo tincidunt. Suspendisse blandit efficitur nisi, eget feugiat turpis blandit id. Fusce vel ipsum id neque faucibus ultrices ac id velit. Nam faucibus laoreet tellus quis posuere.</p>
+        </div>
+    </div>
+</div>
+
 <div class="px-1 py-6 overflow-hidden">
     <div class="container no-gutters">
         <div class="text-center pb-4">
