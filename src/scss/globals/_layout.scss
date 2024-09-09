@@ -13,8 +13,8 @@
     }
 
     &Lg {
-        min-height: 90vmin;
-        min-height: 90svmin;
+        min-height: max(67vh,90vmin);
+        min-height: max(67vh,90svmin);
     }
 
     &Full {
@@ -432,4 +432,10 @@ body {
         height: 111.11%;
         object-fit: cover;
     }
+}
+
+.logoRoundel {
+    width: calc(var(--font-size-xl) * 2);
+    height: calc(var(--font-size-xl) * 2);
+    object-fit: contain;
 }

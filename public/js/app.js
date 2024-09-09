@@ -163,61 +163,160 @@ function Animations() {
     var left = document.querySelector('.historySticky .left');
     var right = document.querySelector('.historySticky .right');
     var content = document.querySelector('.historyContent');
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(background, {
-      clipPath: 'inset(0% 30% round 4px)'
+    var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+    mm.add("(max-width: 959px)", function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(background, {
+        clipPath: 'inset(20% 5% round 4px)'
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(content, {
+        opacity: 0
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(background, {
+        clipPath: 'inset(0% 0% round 4px)',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(backgroundImage, {
+        opacity: 0.2,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(content, {
+        opacity: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: '50% 70%',
+          end: '50% 60%',
+          scrub: true
+        }
+      });
     });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(content, {
-      opacity: 0
+    mm.add("(min-width: 960px) and (max-width: 1599px)", function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(background, {
+        clipPath: 'inset(15% 25% round 4px)'
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(content, {
+        opacity: 0
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(background, {
+        clipPath: 'inset(0% 0% round 4px)',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(backgroundImage, {
+        opacity: 0.2,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(left, {
+        xPercent: -100,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(right, {
+        xPercent: 100,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(content, {
+        opacity: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: '50% 70%',
+          end: '50% 60%',
+          scrub: true
+        }
+      });
     });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(background, {
-      clipPath: 'inset(0% 0% round 4px)',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: content,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: true
-      }
-    });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(backgroundImage, {
-      opacity: 0.2,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: content,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: true
-      }
-    });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(left, {
-      xPercent: -100,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: content,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: true
-      }
-    });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(right, {
-      xPercent: 100,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: content,
-        start: 'top bottom',
-        end: 'top top',
-        scrub: true
-      }
-    });
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(content, {
-      opacity: 1,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: content,
-        start: '50% 90%',
-        end: '50% 60%',
-        scrub: true
-      }
+    mm.add("(min-width: 1600px)", function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(background, {
+        clipPath: 'inset(10% 30% round 4px)'
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].set(content, {
+        opacity: 0
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(background, {
+        clipPath: 'inset(0% 0% round 4px)',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(backgroundImage, {
+        opacity: 0.2,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(left, {
+        xPercent: -100,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(right, {
+        xPercent: 100,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: 'top bottom',
+          end: 'top top',
+          scrub: true
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(content, {
+        opacity: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: content,
+          start: '50% 70%',
+          end: '50% 60%',
+          scrub: true
+        }
+      });
     });
   }
 }

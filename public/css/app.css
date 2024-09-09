@@ -918,6 +918,7 @@ html.lenis, html.lenis body {
 
 .font-size-md {
   font-size: var(--font-size-md);
+  line-height: 1.3;
 }
 
 .font-size-lg {
@@ -2396,8 +2397,8 @@ h6 + .btnGroup,
   z-index: 2;
 }
 .heroLg {
-  min-height: 90vmin;
-  min-height: 90svmin;
+  min-height: max(67vh, 90vmin);
+  min-height: max(67vh, 90svmin);
 }
 .heroFull {
   min-height: 100vh;
@@ -2762,6 +2763,13 @@ body.siteHeader__fixed.siteHeader__can-animate.siteHeader__scroll-up .pageNavSti
      object-fit: cover;
 }
 
+.logoRoundel {
+  width: calc(var(--font-size-xl) * 2);
+  height: calc(var(--font-size-xl) * 2);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .siteMenu {
   position: fixed;
   z-index: 5000;
@@ -3115,8 +3123,28 @@ h6 + .richtext {
   margin-top: 2rem;
 }
 
+h1 + .subheading,
+h2 + .subheading,
+h3 + .subheading,
+h4 + .subheading,
+h5 + .subheading,
+h6 + .subheading {
+  margin-top: 2rem;
+}
+
 .historyContainer {
   position: relative;
+  margin-top: calc(var(--spacer-y-x6) - 20vh);
+}
+@media only screen and (min-width: 960px) {
+  .historyContainer {
+    margin-top: calc(var(--spacer-y-x6) - 15vh);
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .historyContainer {
+    margin-top: calc(var(--spacer-y-x6) - 10vh);
+  }
 }
 .historySticky {
   position: sticky;
@@ -3124,7 +3152,6 @@ h6 + .richtext {
   top: 0;
   overflow: hidden;
   height: 100vh;
-  height: 100svh;
 }
 .historySticky .background {
   position: absolute;
@@ -3143,13 +3170,41 @@ h6 + .richtext {
 .historySticky .left,
 .historySticky .right {
   position: absolute;
-  top: 0;
+  top: 15%;
+  display: none;
+  width: 25%;
+  height: 70%;
+}
+@media only screen and (min-width: 960px) {
+  .historySticky .left,
+  .historySticky .right {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .historySticky .left,
+  .historySticky .right {
+    top: 10%;
+    width: 30%;
+    height: 80%;
+  }
+}
+.historySticky .left .grid,
+.historySticky .right .grid {
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: var(--gutter-x);
-  width: 30%;
+  gap: var(--spacer-x);
+  width: 56vh;
+  min-width: 100%;
   height: 100%;
+}
+@media only screen and (min-width: 1600px) {
+  .historySticky .left .grid,
+  .historySticky .right .grid {
+    width: 64vh;
+  }
 }
 .historySticky .left img,
 .historySticky .right img {
@@ -3161,7 +3216,8 @@ h6 + .richtext {
 }
 .historySticky .left {
   left: 0;
-  padding-right: var(--gutter-x);
+  justify-content: flex-end;
+  padding-right: var(--spacer-x);
 }
 .historySticky .left img:nth-child(1) {
   grid-column: 1/span 2;
@@ -3177,7 +3233,7 @@ h6 + .richtext {
 }
 .historySticky .right {
   right: 0;
-  padding-left: var(--gutter-x);
+  padding-left: var(--spacer-x);
 }
 .historySticky .right img:nth-child(1) {
   grid-column: 1/span 1;

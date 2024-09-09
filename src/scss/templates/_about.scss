@@ -2,6 +2,15 @@
 
     &Container {
         position: relative;
+        margin-top: calc(var(--spacer-y-x6) - 20vh);
+
+        @include md-breakpoint {
+            margin-top: calc(var(--spacer-y-x6) - 15vh);
+        }
+
+        @include xl-breakpoint {
+            margin-top: calc(var(--spacer-y-x6) - 10vh);
+        }
     }
 
     &Sticky {
@@ -10,7 +19,6 @@
         top: 0;
         overflow: hidden;
         height: 100vh;
-        height: 100svh;
 
         .background {
             position: absolute;
@@ -30,13 +38,35 @@
         .left,
         .right {
             position: absolute;
-            top: 0;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(5,1fr);
-            gap: var(--gutter-x);
-            width: 30%;
-            height: 100%;
+            top: 15%;
+            display: none;
+            width: 25%;
+            height: 70%;
+
+            @include md-breakpoint {
+                display: flex;
+            }
+
+            @include xl-breakpoint {
+                top: 10%;
+                width: 30%;
+                height: 80%;
+            }
+
+            .grid {
+                flex-shrink: 0;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(5,1fr);
+                gap: var(--spacer-x);
+                width: 56vh;
+                min-width: 100%;
+                height: 100%;
+
+                @include xl-breakpoint {
+                    width: 64vh;
+                }
+            }
 
             img {
                 width: 100%;
@@ -48,7 +78,8 @@
 
         .left {
             left: 0;
-            padding-right: var(--gutter-x);
+            justify-content: flex-end;
+            padding-right: var(--spacer-x);
 
             img {
 
@@ -71,7 +102,7 @@
 
         .right {
             right: 0;
-            padding-left: var(--gutter-x);
+            padding-left: var(--spacer-x);
 
             img {
 

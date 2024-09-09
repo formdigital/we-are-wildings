@@ -65,67 +65,182 @@ export function Animations() {
         const right = document.querySelector('.historySticky .right')
         const content = document.querySelector('.historyContent')
 
-        gsap.set(background, {
-            clipPath: 'inset(0% 30% round 4px)',
+        let mm = gsap.matchMedia()
+
+        mm.add("(max-width: 959px)", () => {
+
+            gsap.set(background, {
+                clipPath: 'inset(20% 5% round 4px)',
+            })
+
+            gsap.set(content, {
+                opacity: 0,
+            })
+
+            gsap.to(background, {
+                clipPath: 'inset(0% 0% round 4px)',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(backgroundImage, {
+                opacity: 0.2,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(content, {
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: '50% 70%',
+                    end: '50% 60%',
+                    scrub: true,
+                },
+            })
         })
 
-        gsap.set(content, {
-            opacity: 0,
+        mm.add("(min-width: 960px) and (max-width: 1599px)", () => {
+
+            gsap.set(background, {
+                clipPath: 'inset(15% 25% round 4px)',
+            })
+
+            gsap.set(content, {
+                opacity: 0,
+            })
+
+            gsap.to(background, {
+                clipPath: 'inset(0% 0% round 4px)',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(backgroundImage, {
+                opacity: 0.2,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(left, {
+                xPercent: -100,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(right, {
+                xPercent: 100,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(content, {
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: '50% 70%',
+                    end: '50% 60%',
+                    scrub: true,
+                },
+            })
         })
 
-        gsap.to(background, {
-            clipPath: 'inset(0% 0% round 4px)',
-            ease: 'none',
-            scrollTrigger: {
-                trigger: content,
-                start: 'top bottom',
-                end: 'top top',
-                scrub: true,
-            },
-        })
+        mm.add("(min-width: 1600px)", () => {
 
-        gsap.to(backgroundImage, {
-            opacity: 0.2,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: content,
-                start: 'top bottom',
-                end: 'top top',
-                scrub: true,
-            },
-        })
+            gsap.set(background, {
+                clipPath: 'inset(10% 30% round 4px)',
+            })
 
-        gsap.to(left, {
-            xPercent: -100,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: content,
-                start: 'top bottom',
-                end: 'top top',
-                scrub: true,
-            },
-        })
+            gsap.set(content, {
+                opacity: 0,
+            })
 
-        gsap.to(right, {
-            xPercent: 100,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: content,
-                start: 'top bottom',
-                end: 'top top',
-                scrub: true,
-            },
-        })
+            gsap.to(background, {
+                clipPath: 'inset(0% 0% round 4px)',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
 
-        gsap.to(content, {
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: content,
-                start: '50% 90%',
-                end: '50% 60%',
-                scrub: true,
-            },
+            gsap.to(backgroundImage, {
+                opacity: 0.2,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(left, {
+                xPercent: -100,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(right, {
+                xPercent: 100,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: 'top bottom',
+                    end: 'top top',
+                    scrub: true,
+                },
+            })
+
+            gsap.to(content, {
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: content,
+                    start: '50% 70%',
+                    end: '50% 60%',
+                    scrub: true,
+                },
+            })
         })
     }
 }
