@@ -111,3 +111,15 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
+
+.d-none {
+    display: none !important;
+}
+
+.transition {
+    transition: 1s;
+}
+
+.events-none {
+    pointer-events: none;
+}

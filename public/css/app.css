@@ -1714,6 +1714,18 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+.d-none {
+  display: none !important;
+}
+
+.transition {
+  transition: 1s;
+}
+
+.events-none {
+  pointer-events: none;
+}
+
 .sans {
   font-family: var(--font-sans);
 }

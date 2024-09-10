@@ -3,6 +3,7 @@ import Lenis from 'lenis'
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+import Main from './main'
 import { Accordions } from './accordion'
 import { AmenitiesList } from './amenitiesList'
 import { Animations } from './animation'
@@ -15,6 +16,7 @@ import { Menu } from './menu'
 import { PageNavs } from './pageNav'
 import { initialTransition } from './transition'
 import { Videos } from './video'
+
 
 // Scripts to load on initial page entry
 function initialScripts() {
@@ -36,6 +38,7 @@ function initialScripts() {
 
 // Scripts to load on every page entry
 function enterScripts() {
+    new Main()
     console.log('page entered')
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     Accordions()

@@ -19,10 +19,10 @@
 
                 <header class="siteHeader <?php if (isset($invertHeader) && $invertHeader == 'true') {echo 'siteHeaderInverted';} ?>">
 
-                    <div class="siteHeaderNotice">
+                    <div id="sticky-pop-up" class="siteHeaderNotice d-none transition">
                         <div class="message"><span>Summer Special!</span> Book now for 20% off!</div>
-                        <button class="closeBtn">
-                            <svg><use href="images/icons.svg#close-sm"/></svg>
+                        <button id="sticky-pop-up--close" class="closeBtn sticky-pop-up-hide">
+                            <svg class="events-none"><use href="images/icons.svg#close-sm"/></svg>
                         </button>
                     </div>
 
