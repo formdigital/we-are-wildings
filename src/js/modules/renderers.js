@@ -9,6 +9,7 @@ import { Animations } from './animation'
 import { Carousels } from './carousel'
 import { FancyboxModals } from './fancybox'
 import { Filters } from './filter'
+import { Forms } from './forms'
 import { HeaderHeight, HeaderHide } from './header'
 import { Menu } from './menu'
 import { PageNavs } from './pageNav'
@@ -43,6 +44,7 @@ function enterScripts() {
     Carousels()
     FancyboxModals()
     Filters()
+    Forms()
     HeaderHeight()
     HeaderHide()
     Menu()

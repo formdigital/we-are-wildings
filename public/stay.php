@@ -5,7 +5,33 @@
         <h1 class="serif uppercase font-size-4xl fadeInReveal">Stay with us</h1>
     </div>
     <div class="heroFooter px-1 py-1">
-        <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+        <div class="container no-gutters">
+            <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+            <div class="bookingSearchForm fadeInReveal">
+                <form>
+
+                    <div class="formInputBlock">
+                        <label for="checkInDate">Check in</label>
+                        <input class="datePickerInput" id="checkInDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="checkOutDate">Check out</label>
+                        <input class="datePickerInput" id="checkOutDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="guests">Guests</label>
+                        <input type="number" value="2" min="1" max="20">
+                    </div>
+
+                    <div class="formButtonBlock">
+                        <button class="btn btnGreen">Search</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
     </div>
     <div class="heroBg">
         <img src="https://images.unsplash.com/photo-1595079917801-4a04e2985fba?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">

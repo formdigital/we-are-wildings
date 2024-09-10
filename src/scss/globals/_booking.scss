@@ -1,0 +1,236 @@
+.bookingSearchForm {
+    padding: 0 var(--spacer-y);
+    border-radius: 0.25rem;
+    background: var(--color-white);
+
+    @include sm-breakpoint {
+        padding: 0;
+    }
+
+    @include md-breakpoint {
+        padding: 0.75rem 0;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include md-breakpoint {
+            align-items: center;
+        }
+    }
+
+    .formInputBlock {
+        width: 100%;
+        padding: 1rem 0;
+
+        @include sm-breakpoint {
+            width: 50%;
+            padding: 1rem var(--spacer-y);
+        }
+
+        @include md-breakpoint {
+            flex: 1;
+            width: auto;
+            padding: 0.25rem var(--spacer-y);
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+
+            @include sm-breakpoint {
+                border-bottom: 1px solid rgba(25,27,25,0.1);
+            }
+
+            @include md-breakpoint {
+                border-bottom: none;
+            }
+        }
+
+        &:nth-child(even) {
+
+            @include sm-breakpoint {
+                border-left: 1px solid rgba(25,27,25,0.1);
+            }
+
+            @include md-breakpoint {
+                border-left: none;
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            border-top: 1px solid rgba(25,27,25,0.1);
+
+            @include sm-breakpoint {
+                border-top: none;
+            }
+
+            @include md-breakpoint {
+                border-left: 1px solid rgba(25,27,25,0.1);
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-green);
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 0.5em 0 0 0;
+            font-size: 1rem;
+            color: var(--color-green);
+            border: none;
+            background: transparent;
+
+            @include md-breakpoint {
+                padding: 0.5em 0 0.25rem 0;
+            }
+        }
+    }
+
+    .formButtonBlock {
+        width: 100%;
+        padding: 0 0 1rem 0;
+
+        @include sm-breakpoint {
+            width: 50%;
+            padding: 1rem var(--spacer-y);
+            border-left: 1px solid rgba(25,27,25,0.1);
+        }
+
+        @include md-breakpoint {
+            width: auto;
+            padding: 0 var(--spacer-y) 0 0;
+            border-left: none;
+        }
+
+        .btn {
+            width: 100%;
+    
+            @include md-breakpoint {
+                width: auto;
+            }
+        }
+    }
+}
+
+.subheading + .bookingSearchForm {
+    margin-top: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    + .supercontrolEmbed {
+        margin-top: var(--spacer-y-x2);
+    }
+}
+
+// Date picker styles
+.flatpickr-calendar {
+    box-sizing: border-box;
+    width: auto;
+    padding: 0.5rem;
+    
+    .flatpickr {
+
+        &-months {
+            position: relative;
+        }
+
+        &-month {
+            color: var(--color-green);
+        }
+
+        &-prev-month,
+        &-next-month {
+            color: var(--color-green);
+            fill: var(--color-green);
+
+            svg {
+                color: var(--color-green);
+                fill: var(--color-green);
+            }
+        
+            &:hover {
+                color: var(--color-green-light);
+                fill: var(--color-green-light);
+    
+                svg {
+                    color: var(--color-yellow);
+                    fill: var(--color-yellow);
+                }
+            }
+        }
+
+        &-current-month {
+
+            .flatpickr-monthDropdown-months,
+            input.cur-year {
+                font-weight: 400;
+                font-size: 1rem;
+    
+                &:hover {
+                    border-color: var(--color-white);
+                    background: var(--color-white);
+                }
+            }
+        }
+
+        &-weekday {
+            font-weight: 500;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-green-light);
+        }
+
+        &-days {
+            padding-bottom: 4px;
+        }
+
+        &-day {
+            width: 42px;
+            min-width: 42px;
+            max-width: 42px;
+            height: 42px;
+            line-height: 42px;
+            color: var(--color-green);
+
+            &:not(.today):not(.selected):hover {
+                border-color: var(--color-white);
+                background: var(--color-white);
+            }
+
+            &.nextMonthDay {
+                color: rgba(41,56,43,0.3);
+            }
+
+            &.today {
+                color: var(--color-green);
+                border-color: var(--color-green);
+                background: transparent;
+
+                &:not(.selected):hover {
+                    background: var(--color-white);
+                }
+            }
+
+            &.selected {
+                color: var(--color-white);
+                border-color: var(--color-green);
+                background: var(--color-green);
+            }
+        }
+    }
+}

@@ -343,13 +343,20 @@
 
 </div>
 
-<div class="px-1 py-6 bg-green pageNavTarget" id="booking">
-    <h2 class="serif uppercase font-size-2xl text-center fadeInReveal">Book your stay</h2>
-    <div data-calendar-key="3BA6D7EE6151C45EDA3D810D9EAA58A9A72C66C4F09702F7A149ED9053FC93F6922459BA9B30FC00548DD35FB666361DACE2502BE0AAA26D"
-        data-calendar-widescreen-months="2"
-        data-calendar-property-id="580474"
-        data-calendar-departure-picker="true">
-        Your widget will appear here.
+<div class="px-1 py-4 bg-green pageNavTarget" id="booking">
+    <div class="container no-gutters text-center">
+        <div class="row justify-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                <h2 class="serif uppercase font-size-2xl fadeInReveal">Book your stay</h2>
+                <div class="supercontrolEmbed" data-calendar-key="3BA6D7EE6151C45EDA3D810D9EAA58A9A72C66C4F09702F7A149ED9053FC93F6922459BA9B30FC00548DD35FB666361DACE2502BE0AAA26D"
+                    data-calendar-widescreen-months="2"
+                    data-calendar-property-id="580474"
+                    data-calendar-departure-picker="true">
+                    Your widget will appear here.
+                </div>
+                <script src="https://secure.supercontrol.co.uk/components/embed.js"></script>
+            </div>
+        </div>
     </div>
 </div>
 

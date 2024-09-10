@@ -28,6 +28,7 @@
     "@fancyapps/ui": "^5.0.36",
     "@unseenco/taxi": "^1.6.0",
     "accordion-js": "^3.3.4",
+    "flatpickr": "^4.6.13",
     "gsap": "^3.12.5",
     "lenis": "^1.1.13",
     "mixitup": "^3.3.1",

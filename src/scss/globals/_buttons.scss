@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     height: var(--btn-height);
-    padding: 0 calc(var(--btn-height) * 0.5);
+    padding: 0 calc(var(--btn-height) * 0.6);
     font-family: var(--font-sans);
     font-weight: 500;
     font-size: 0.7rem;
@@ -87,6 +87,8 @@
 
     &Sm {
         --btn-height: 1.75rem;
+
+        padding: 0 calc(var(--btn-height) * 0.5);
     }
 }
 
@@ -111,8 +113,11 @@
 .siteHeaderInverted {
 
     .btn {
-        --btn-color: var(--color-green);
-        --btn-background: var(--color-white);
+
+        &:not(.btnGreen) {
+            --btn-color: var(--color-green);
+            --btn-background: var(--color-white);
+        }
 
         &Stroke {
             border: 1px solid rgba(240,237,234,0.2);

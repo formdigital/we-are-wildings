@@ -6,7 +6,33 @@
         <h2 class="serif uppercase font-size-4xl fadeInReveal">Wild by Nature</h2>
     </div>
     <div class="heroFooter px-1 py-1">
-        <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+        <div class="container no-gutters">
+            <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+            <div class="bookingSearchForm fadeInReveal">
+                <form>
+
+                    <div class="formInputBlock">
+                        <label for="checkInDate">Check in</label>
+                        <input class="datePickerInput" id="checkInDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="checkOutDate">Check out</label>
+                        <input class="datePickerInput" id="checkOutDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="guests">Guests</label>
+                        <input type="number" value="2" min="1" max="20">
+                    </div>
+
+                    <div class="formButtonBlock">
+                        <button class="btn btnGreen">Search</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
     <div class="heroBg">
         <video autoplay muted loop playsinline>
@@ -98,7 +124,33 @@
         </div>
     </div>
     <div class="py-3">
-        <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+        <div class="container no-gutters">
+            <h3 class="subheading uppercase font-size-sm text-center fadeInReveal">Book your stay</h3>
+            <div class="bookingSearchForm fadeInReveal">
+                <form>
+
+                    <div class="formInputBlock">
+                        <label for="checkInDate">Check in</label>
+                        <input class="datePickerInput" id="checkInDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="checkOutDate">Check out</label>
+                        <input class="datePickerInput" id="checkOutDate" type="text" placeholder="Select date...">
+                    </div>
+
+                    <div class="formInputBlock">
+                        <label for="guests">Guests</label>
+                        <input type="number" value="2" min="1" max="20">
+                    </div>
+
+                    <div class="formButtonBlock">
+                        <button class="btn btnGreen">Search</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
