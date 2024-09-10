@@ -84,12 +84,17 @@
             width: 100%;
             padding: 0.5em 0 0 0;
             font-size: 1rem;
+            text-align: left;
             color: var(--color-green);
             border: none;
             background: transparent;
 
             @include md-breakpoint {
                 padding: 0.5em 0 0.25rem 0;
+            }
+
+            &::placeholder {
+                color: var(--color-green);
             }
         }
     }
@@ -137,6 +142,34 @@ h6 {
 }
 
 // Date picker styles
+.flatpickr-input {
+    color: var(--color-green);
+                
+    &::before {
+        color: var(--color-green);
+        content: attr(placeholder);
+    }
+
+    &::-webkit-date-and-time-value {
+        text-align: left;
+        color: var(--color-green);
+    }
+
+    &[value]:not([value=""]) {
+    
+        &::before {
+            content: '' !important;
+        }
+
+        + input {
+    
+            &::before {
+                content: '' !important;
+            }
+        }
+    }
+}
+
 .flatpickr-calendar {
     box-sizing: border-box;
     width: auto;

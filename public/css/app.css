@@ -2396,6 +2396,7 @@ h6 + .accordionContainer {
   width: 100%;
   padding: 0.5em 0 0 0;
   font-size: 1rem;
+  text-align: left;
   color: var(--color-green);
   border: none;
   background: transparent;
@@ -2404,6 +2405,12 @@ h6 + .accordionContainer {
   .bookingSearchForm .formInputBlock input {
     padding: 0.5em 0 0.25rem 0;
   }
+}
+.bookingSearchForm .formInputBlock input::-moz-placeholder {
+  color: var(--color-green);
+}
+.bookingSearchForm .formInputBlock input::placeholder {
+  color: var(--color-green);
 }
 .bookingSearchForm .formButtonBlock {
   width: 100%;
@@ -2443,6 +2450,24 @@ h4 + .supercontrolEmbed,
 h5 + .supercontrolEmbed,
 h6 + .supercontrolEmbed {
   margin-top: var(--spacer-y-x2);
+}
+
+.flatpickr-input {
+  color: var(--color-green);
+}
+.flatpickr-input::before {
+  color: var(--color-green);
+  content: attr(placeholder);
+}
+.flatpickr-input::-webkit-date-and-time-value {
+  text-align: left;
+  color: var(--color-green);
+}
+.flatpickr-input[value]:not([value=""])::before {
+  content: "" !important;
+}
+.flatpickr-input[value]:not([value=""]) + input::before {
+  content: "" !important;
 }
 
 .flatpickr-calendar {
