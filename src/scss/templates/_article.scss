@@ -44,6 +44,21 @@
         + .articleGalleryFull {
             margin-top: var(--spacer-y-x4);
         }
+
+        + .articleBlock > .articleGalleryFull:first-child {
+            margin-top: var(--spacer-y-x4);
+        }
+    }
+
+    &Block {
+
+        + .articleMain {
+            margin-top: var(--spacer-y-x4);
+        }
+
+        + .articleBreak {
+            margin-top: var(--spacer-y-x3);
+        }
     }
 
     &Break {
@@ -58,6 +73,20 @@
         + .articleMap,
         + .articleLinks {
             margin-top: var(--spacer-y-x3);
+        }
+
+        + .articleBlock {
+
+            > .articleBody:first-child,
+            > .articleQuote:first-child,
+            > .articleReviews:first-child,
+            > .articleGallery:first-child,
+            > .articleImage:first-child,
+            > .articleVideo:first-child,
+            > .articleMap:first-child,
+            > .articleLinks:first-child {
+                margin-top: var(--spacer-y-x3);
+            }
         }
     }
 

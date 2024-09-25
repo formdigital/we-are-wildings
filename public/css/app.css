@@ -4355,6 +4355,15 @@ h6 + .subheading {
 .articleMain + .articleGalleryFull {
   margin-top: var(--spacer-y-x4);
 }
+.articleMain + .articleBlock > .articleGalleryFull:first-child {
+  margin-top: var(--spacer-y-x4);
+}
+.articleBlock + .articleMain {
+  margin-top: var(--spacer-y-x4);
+}
+.articleBlock + .articleBreak {
+  margin-top: var(--spacer-y-x3);
+}
 .articleBreak {
   border-top: 1px solid rgba(25, 27, 25, 0.1);
 }
@@ -4366,6 +4375,16 @@ h6 + .subheading {
 .articleBreak + .articleVideo,
 .articleBreak + .articleMap,
 .articleBreak + .articleLinks {
+  margin-top: var(--spacer-y-x3);
+}
+.articleBreak + .articleBlock > .articleBody:first-child,
+.articleBreak + .articleBlock > .articleQuote:first-child,
+.articleBreak + .articleBlock > .articleReviews:first-child,
+.articleBreak + .articleBlock > .articleGallery:first-child,
+.articleBreak + .articleBlock > .articleImage:first-child,
+.articleBreak + .articleBlock > .articleVideo:first-child,
+.articleBreak + .articleBlock > .articleMap:first-child,
+.articleBreak + .articleBlock > .articleLinks:first-child {
   margin-top: var(--spacer-y-x3);
 }
 .articleBody + .articleBody,
