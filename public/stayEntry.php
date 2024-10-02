@@ -219,22 +219,22 @@
                     <div class="articleGalleryFull fadeInReveal">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="https://picsum.photos/id/12/1500/1000" data-fancybox="gallery">
+                                <a href="https://picsum.photos/id/12/1500/1000" data-fancybox="gallery" data-taxi-ignore>
                                     <img src="https://picsum.photos/id/12/1500/1000">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="https://picsum.photos/id/13/1200/1200" data-fancybox="gallery">
+                                <a href="https://picsum.photos/id/13/1200/1200" data-fancybox="gallery" data-taxi-ignore>
                                     <img src="https://picsum.photos/id/13/1200/1200">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="https://picsum.photos/id/14/1200/1500" data-fancybox="gallery">
+                                <a href="https://picsum.photos/id/14/1200/1500" data-fancybox="gallery" data-taxi-ignore>
                                     <img src="https://picsum.photos/id/14/1200/1500">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="https://picsum.photos/id/15/1500/1200" data-fancybox="gallery">
+                                <a href="https://picsum.photos/id/15/1500/1200" data-fancybox="gallery" data-taxi-ignore>
                                     <img src="https://picsum.photos/id/15/1500/1200">
                                 </a>
                             </div>
